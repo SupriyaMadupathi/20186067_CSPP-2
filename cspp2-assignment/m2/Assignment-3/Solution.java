@@ -7,10 +7,11 @@ public class Solution {
     /**
     *Private constructor.
     */
-    private Solution() {//We are not using this constructor.
+    private Solution() {
+    //We are not using this constructor.
     }
-    /*
-    Do not modify this main function.
+    /**
+    *Do not modify this main function.
     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);   
@@ -18,10 +19,12 @@ public class Solution {
         int exponent = s.nextInt();
         System.out.println((long) power(base, exponent));
     }
-    /*
-    Need to write the power function and print the output.
+    /**
+    *Need to write the power function and print the output.
+    *@param base variable base
+    *@param exponent variable exponent
     */
-    public static double power(int base, int exponent) {
+    public static double power(final int base, final int exponent) {
         return Math.pow(base, exponent);
     }
 }
