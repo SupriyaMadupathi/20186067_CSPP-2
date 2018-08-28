@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Solution {
 	/*
-	do not modify this main function.
-	*/
+	 *do not modify this main function.
+	 */
 	public static void main(String[] args) {
 		/*
-		* function to read input from user
-		*/
+		 * function to read input from user
+		 */
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
 		int b = scan.nextInt();
@@ -18,8 +18,8 @@ public class Solution {
 
     public static void rootsOfQuadraticEquation(int a, int b, int c) {
     	/*
-    	*main function to calculate roots
-    	*/
+    	 *main function to calculate roots
+    	 */
 		long det = (b * b) - (4 * a * c);
 		double root1 = (-b + Math.sqrt(det)) / (2 * a);
 		double	root2 = (-b - Math.sqrt(det)) / (2 * a);
@@ -27,6 +27,6 @@ public class Solution {
 		}
 	}
 	/*
-	Need to write the rootsOfQuadraticEquation function and print  output.
-	*/
+	 Need to write the rootsOfQuadraticEquation function and print  output.
+	 */
 
