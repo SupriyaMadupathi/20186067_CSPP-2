@@ -14,6 +14,9 @@ public class Solution {
 
 
     public static void rootsOfQuadraticEquation(int a, int b, int c) {
+    	/*
+    	*main function to calculate roots
+    	*/
 		long det = (b * b) - (4 * a * c);
 		double root1 = (-b + Math.sqrt(det)) / (2 * a);
 		double	root2 = (-b - Math.sqrt(det)) / (2 * a);
