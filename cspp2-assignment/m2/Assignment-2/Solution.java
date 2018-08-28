@@ -25,7 +25,7 @@ public class Solution {
      *@param b variable b
      *@param c variable c
      */
-    public static void rootsOfQuadraticEquation(int a, int b, int c) {
+    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         long det = (b * b) - (FOUR * a * c);
         double root1 = (-b + Math.sqrt(det)) / (2 * a);
         double  root2 = (-b - Math.sqrt(det)) / (2 * a);
