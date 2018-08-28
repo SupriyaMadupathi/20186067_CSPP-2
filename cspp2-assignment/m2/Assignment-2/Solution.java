@@ -3,7 +3,7 @@ import java.util.Scanner;
  *do not modify this main function.
  * @author Supriya
  */
-public class Solution {
+public final class Solution {
 
     /**
     *Private constructor
