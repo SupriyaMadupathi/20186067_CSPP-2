@@ -8,7 +8,7 @@ public class Solution {
     private static final int FOUR = 4;
     /**
      *do not modify this main function.
-     *@param args
+     *@param args variable
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -25,8 +25,8 @@ public class Solution {
      *@param b variable b
      *@param c variable c
      */
-    public static void rootsOfQuadraticEquation(final int a, 
-                                                final int b, 
+    public static void rootsOfQuadraticEquation(final int a,
+                                                final int b,
                                                 final int c) {
         long det = (b * b) - (FOUR * a * c);
         double root1 = (-b + Math.sqrt(det)) / (2 * a);
