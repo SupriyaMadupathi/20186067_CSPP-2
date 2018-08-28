@@ -5,6 +5,13 @@ import java.util.Scanner;
  */
 public class Solution {
 
+    /**
+    *Private constructor
+    */
+    private Solution() {
+        //We are not using this constructor
+    }
+
     private static final int FOUR = 4;
     /**
      *do not modify this main function.
