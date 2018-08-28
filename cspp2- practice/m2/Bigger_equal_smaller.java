@@ -2,16 +2,14 @@ import java.util.Scanner;
 /**
 *@author SupriyaMadupathi
 */
-public final class NumberCompare {
+public class Bigger_equal_smaller {
     /**
     *Do not modify this main function.
     */
     /**
     * Empty Constructor.
     */
-    private Solution() {
-    //we are not using this constructor
-    }
+    
     /**
     * Main function to print.
     * @param args is the parameter for this function
