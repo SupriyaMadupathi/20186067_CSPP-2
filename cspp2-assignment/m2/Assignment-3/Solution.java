@@ -1,6 +1,14 @@
 import java.util.Scanner;
-
+/**
+ *do not modify this main function.
+ * @author Supriya
+ */
 public class Solution {
+    /**
+    *Private constructor.
+    */
+    private Solution() {//We are not using this constructor.
+    }
     /*
     Do not modify this main function.
     */
@@ -8,7 +16,7 @@ public class Solution {
         Scanner s = new Scanner(System.in);   
         int base = s.nextInt();
         int exponent = s.nextInt();
-        System.out.println((long) power(base,exponent));
+        System.out.println((long) power(base, exponent));
     }
     /*
     Need to write the power function and print the output.
