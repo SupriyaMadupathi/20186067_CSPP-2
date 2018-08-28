@@ -24,6 +24,6 @@ public class Solution {
 		}
 	}
 	/*
-	Need to write the rootsOfQuadraticEquation function and print the output.
+	Need to write the rootsOfQuadraticEquation function and print  output.
 	*/
 
