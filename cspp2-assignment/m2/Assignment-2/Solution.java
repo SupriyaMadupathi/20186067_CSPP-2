@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Solution {
 	/*
-	Do not modify this main function.
+	do not modify this main function.
 	*/
 	public static void main(String[] args) {
 		/*
