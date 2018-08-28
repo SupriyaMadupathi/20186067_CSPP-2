@@ -11,7 +11,7 @@ public final class Solution {
         //We are not using this constructor.
     }
     /*
-    * @variable FOUR variable.
+    *@variable FOUR variable.
     */
     private static final int FOUR = 4;
     /**
