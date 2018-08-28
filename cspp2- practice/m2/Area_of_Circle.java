@@ -4,7 +4,7 @@ import java.util.Scanner;
  */
 public final class Area_of_Circle {
     /**
-    * Pi value
+    * Pi value.
     */
     private static final double PI = 3.14;
    /**
@@ -29,15 +29,14 @@ public final class Area_of_Circle {
     *@param radius  is the parameter for this method
     *@return  double for area
     */
-   public static double area(final int radius){
+   public static double area(final int radius) {
         return (pi() * radius * radius);
    }
    /**
    * pi method to return pi value.
    *@return double value
    */
-   public static double pi(){
+   public static double pi() {
         return PI;
    }
 }
-
