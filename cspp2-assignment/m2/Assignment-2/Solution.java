@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Solution {
+
+	private static final int FOUR = 4;
 	/**
 	 *do not modify this main function.
 	 */
@@ -20,7 +22,7 @@ public class Solution {
     	/**
     	 *main function to calculate roots
     	 */
-		long det = (b * b) - (4 * a * c);
+		long det = (b * b) - (FOUR * a * c);
 		double root1 = (-b + Math.sqrt(det)) / (2 * a);
 		double	root2 = (-b - Math.sqrt(det)) / (2 * a);
 		System.out.println(root1 + " " + root2);
