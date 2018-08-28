@@ -21,9 +21,9 @@ public class Solution {
 
     /**
      *Need to write the rootsOfQuadraticEquation function and print  output.
-     *@param a
-     *@param b
-     *@param c
+     *@param a variable a
+     *@param b variable b
+     *@param c variable c
      */
     public static void rootsOfQuadraticEquation(int a, int b, int c) {
         long det = (b * b) - (FOUR * a * c);
