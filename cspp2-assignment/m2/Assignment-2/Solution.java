@@ -6,12 +6,14 @@ import java.util.Scanner;
 public final class Solution {
 
     /**
-    *Private constructor
+    *Private constructor.
     */
     private Solution() {
-        //We are not using this constructor
+        //We are not using this constructor.
     }
-
+    /*
+    * @variable FOUR.
+    */
     private static final int FOUR = 4;
     /**
      *do not modify this main function.
@@ -27,7 +29,7 @@ public final class Solution {
 
 
     /**
-     *Need to write the rootsOfQuadraticEquation function and print  output.
+     *Need to write the rootsOfQuadraticEquation function and print output.
      *@param a variable a
      *@param b variable b
      *@param c variable c
