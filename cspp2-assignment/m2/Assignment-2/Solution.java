@@ -10,7 +10,7 @@ public final class Solution {
     private Solution() {
         //We are not using this constructor.
     }
-    /*
+    /**
     *@variable FOUR variable.
     */
     private static final int FOUR = 4;
@@ -40,3 +40,4 @@ public final class Solution {
         System.out.println(root1 + " " + root2);
         }
     }
+
