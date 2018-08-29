@@ -20,7 +20,7 @@ public final class Solution {
       *
       * @param      args  The arguments
       */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
 
         Scanner s = new Scanner(System.in);      
@@ -28,8 +28,7 @@ public final class Solution {
         int count = 0;
         for (int i = 1; i < n; i++) {
             int a = i;
-            
-            while(a != 0) {
+            while (a != 0) {
                 int k = a % TEN;
                 a = a / TEN;
                 if (k == SEVEN) {
