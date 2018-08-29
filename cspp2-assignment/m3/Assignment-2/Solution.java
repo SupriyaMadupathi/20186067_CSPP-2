@@ -4,9 +4,9 @@ import java.util.Scanner;
  * @author Supriya
  */
 public final class Solution {
-	/**
-	  * Private constructor.
-	  */
+    /**
+     * Private constructor.
+     */
     private Solution() {
     //We are not using this constructor.
     }
@@ -27,19 +27,16 @@ public final class Solution {
         int n = s.nextInt();
         int count = 0;
         for (int i = 1; i < n; i++) {
-        	int a = i;
-        	
-        	while(a != 0) {
-        		int k = a % TEN;
-        		a = a / TEN;
-        		if (k == SEVEN) {
-        			count += 1;
-        			
-        			
-        		}
-        	}	
+            int a = i;
+            
+            while(a != 0) {
+                int k = a % TEN;
+                a = a / TEN;
+                if (k == SEVEN) {
+                    count += 1; 
+                }
+            }   
         }
         System.out.println(count);
     }
 }
-            
