@@ -33,9 +33,9 @@ public final class Solution {
                 int k = a % TEN;
                 a = a / TEN;
                 if (k == SEVEN) {
-                    count += 1; 
+                    count += 1;
                 }
-            }   
+            }
         }
         System.out.println(count);
     }
