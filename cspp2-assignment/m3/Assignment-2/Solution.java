@@ -5,11 +5,16 @@ import java.util.Scanner;
  */
 public final class Solution {
 	/**
-    *Private constructor.
-    */
+	  * Private constructor.
+	  */
     private Solution() {
     //We are not using this constructor.
     }
+    /**
+    *@variable TEN variable.
+    */
+    private static final int TEN = 10;
+    private static final int SEVEN = 7;
      /**
       * { function_description }.
       *
@@ -25,9 +30,9 @@ public final class Solution {
         	int a = i;
         	
         	while(a != 0) {
-        		int k = a % 10;
-        		a = a / 10;
-        		if (k == 7) {
+        		int k = a % TEN;
+        		a = a / TEN;
+        		if (k == SEVEN) {
         			count += 1;
         			
         			
