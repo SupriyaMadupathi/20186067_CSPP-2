@@ -1,15 +1,27 @@
 import java.util.Scanner;
-/*
-    Do not modify this main function.
+/**
+ *do not modify this main function.
+ * @author Supriya
+ */
+public final class Solution {
+    /**
+    *Private constructor.
     */
-public class Solution {
+    private Solution() {
+    //We are not using this constructor.
+    }
+     /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
 
-    public static void main(String[] args) {
 
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        System.out.println((int)gcd(n1,n2));
+        System.out.println((int)gcd(n1, n2));
     }
     
     /**
