@@ -14,6 +14,9 @@ public final class Solution {
     *@variable TEN variable.
     */
     private static final int TEN = 10;
+    /**
+    *@variable TEN variable.
+    */
     private static final int SEVEN = 7;
      /**
       * { function_description }.
