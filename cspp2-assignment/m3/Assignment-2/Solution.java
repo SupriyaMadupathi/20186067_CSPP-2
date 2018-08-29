@@ -15,7 +15,7 @@ public final class Solution {
     */
     private static final int TEN = 10;
     /**
-    *@variable TEN variable.
+    *@variable SEVEN variable.
     */
     private static final int SEVEN = 7;
      /**
@@ -24,8 +24,6 @@ public final class Solution {
       * @param      args  The arguments
       */
     public static void main(final String[] args) {
-
-
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         int count = 0;
