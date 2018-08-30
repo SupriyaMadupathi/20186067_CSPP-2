@@ -38,7 +38,7 @@ public final class Solution {
         }
         m = s.nextInt();
         n = s.nextInt();
-        int b [][] = new int[m][n];
+        int b[][] = new int[m][n];
         for (int c = 0; c < m; c++) {
                 for (int j = 0; j < n; j++) {
                     b[c][j] = s.nextInt();
