@@ -52,12 +52,10 @@ public final class Solution {
                 {
                 }
             }
-            if (p == m && q == n){
-                int sum[][] = new int[m][n];
-                for (int f = 0; f < p; f++) 
-                {
-                    for (int j = 0; j < n; j++) 
-                    {
+            if (p == m && q == n) {
+                int sum [][] = new int[m][n];
+                for (int f = 0; f < p; f++) {
+                    for (int j = 0; j < n; j++) {
                         sum[f][j] = a[f][j] + b[f][j];
                     }
                 }
