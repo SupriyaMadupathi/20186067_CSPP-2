@@ -25,6 +25,7 @@ public final class Solution {
                 for (int j = 0; j < q; j++) {
                     a[i][j] = s.nextInt();
                 }
+            }
         // for (int b = 0; b < p; b++) {
         //         for (int j = 0; j < q; j++) {
         //             System.out.print(a[b][j]+" ");
@@ -55,7 +56,6 @@ public final class Solution {
                 for (int e = 0; e < p; e++) {
                     for (int j = 0; j < n; j++) {
                         temp += sum[e][j] + " ";
-
                     }
                     temp = temp.trim();
                     temp += '\n';
@@ -64,6 +64,5 @@ public final class Solution {
         } else {
                 System.out.println("not possible");
             }
-}
 }
 }
