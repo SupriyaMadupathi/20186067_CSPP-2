@@ -16,9 +16,12 @@ public final class Solution {
      * @param      args  The arguments
      */
     /*
-    *fill this main function to print maximum of given array
-    */
+     * fill this main function to print maximum of given array
+     *
+     * @param      args  The argumentss
+     */
     public static void main(final String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
@@ -26,7 +29,7 @@ public final class Solution {
             arr[i] = sc.nextInt();
         }
             int max = arr[0];
-            for (int i = 1; i < arr.length; i++ ) {
+            for (int i = 1; i < arr.length; i++) {
                 if (arr[i] > max) {
                     max = arr[i];
                 }
