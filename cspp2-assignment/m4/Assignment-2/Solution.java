@@ -38,16 +38,14 @@ public final class Solution {
         }
         m = s.nextInt();
         n = s.nextInt();
-        int b[][] = new int[m][n];
-        for (int c = 0; c < m; c++) 
-            {
+        int b [][] = new int[m][n];
+        for (int c = 0; c < m; c++) {
                 for (int j = 0; j < n; j++) {
                     b[c][j] = s.nextInt();
                 }
             }
         for (int d = 0; d < m; d++) {
-                for (int j = 0; j < n; j++)
-                {
+                for (int j = 0; j < n; j++) {
                 }
             }
             if (p == m && q == n) {
