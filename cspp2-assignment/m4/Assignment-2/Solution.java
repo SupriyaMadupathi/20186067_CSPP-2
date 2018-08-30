@@ -15,13 +15,13 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-     public static void main(String[] args) {
-		int p, q, m, n;
-		Scanner s = new Scanner(System.in);
-		p = s.nextInt();
-		q = s.nextInt();
-		int a[][] = new int[p][q];
-		for (int i = 0; i < p; i++) 
+    public static void main(final String[] args) {
+        int p, q, m, n;
+        Scanner s = new Scanner(System.in);
+        p = s.nextInt();
+        q = s.nextInt();
+        int a[][] = new int[p][q];
+        for (int i = 0; i < p; i++) 
             {
                 for (int j = 0; j < q; j++) 
                 {
@@ -36,8 +36,8 @@ public final class Solution {
                 /*System.out.println("");*/
             }
         }
-		m = s.nextInt();
-		n = s.nextInt();
+        m = s.nextInt();
+        n = s.nextInt();
         int b[][] = new int[m][n];
         for (int c = 0; c < m; c++) 
             {
@@ -50,34 +50,29 @@ public final class Solution {
             {
                 for (int j = 0; j < n; j++) 
                 {
-                    /*System.out.print(b[d][j]+" ");*/
                 }
-                /*System.out.println("");
-*/
-	        }
-	        if (p == m && q == n){
-		        int sum[][] = new int[m][n];
-	        	for (int f = 0; f < p; f++) 
-	            {
-	                for (int j = 0; j < n; j++) 
-	                {
-	                    sum[f][j] = a[f][j] + b[f][j];
-	                    
-	                }
-	            }
-	            String temp = "";
-	            for (int e = 0; e < p; e++) 
-	            {
-	                for (int j = 0; j < n; j++) {
-	                    temp += sum[e][j] + " ";
+            }
+            if (p == m && q == n){
+                int sum[][] = new int[m][n];
+                for (int f = 0; f < p; f++) 
+                {
+                    for (int j = 0; j < n; j++) 
+                    {
+                        sum[f][j] = a[f][j] + b[f][j];
+                    }
+                }
+                String temp = "";
+                for (int e = 0; e < p; e++) {
+                    for (int j = 0; j < n; j++) {
+                        temp += sum[e][j] + " ";
 
-	                }
-	                temp = temp.trim();
-	                temp += '\n';
-            } 
+                    }
+                    temp = temp.trim();
+                    temp += '\n';
+            }
             System.out.println(temp);
         } else {
-            	System.out.println("not possible");
+                System.out.println("not possible");
             }
 }
 }
