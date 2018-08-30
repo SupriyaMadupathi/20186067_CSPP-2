@@ -2,19 +2,27 @@ import java.util.Scanner;
 /**
  * @author     SupriyaMadupathi
  */
-public final class FirstLast6 {
+public final class Average {
     /**.
      * Constructs the object.
      */
-    private FirstLast6() {
+    private Average() {
     }
     /**
     * Main function to print.
     * @param args is the parameter for this function
     */
      public static void main(final String[] args) {
+        int n, sum = 0;
+        float avg;
         Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
+        n = s.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = s.nextInt();
+            sum = sum + arr[i];
+        }
+        avg = (float) sum / n;
+        System.out.println("Avarage is :" + avg);
+    }
+}
