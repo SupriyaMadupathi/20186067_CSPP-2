@@ -21,16 +21,12 @@ public final class Solution {
         p = s.nextInt();
         q = s.nextInt();
         int a[][] = new int[p][q];
-        for (int i = 0; i < p; i++) 
-            {
-                for (int j = 0; j < q; j++) 
-                {
+        for (int i = 0; i < p; i++) {
+                for (int j = 0; j < q; j++) {
                     a[i][j] = s.nextInt();
                 }
-        for (int b = 0; b < p; b++) 
-            {
-                for (int j = 0; j < q; j++) 
-                {
+        for (int b = 0; b < p; b++) {
+                for (int j = 0; j < q; j++) {
                    /* System.out.print(a[b][j]+" ");*/
                 }
                 /*System.out.println("");*/
