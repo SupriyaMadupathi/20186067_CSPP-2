@@ -15,13 +15,8 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    /*
-     * fill this main function to print maximum of given array
-     *
-     * @param      args  The argumentss
-     */
+    
     public static void main(final String[] args) {
-
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
