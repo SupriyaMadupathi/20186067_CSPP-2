@@ -19,6 +19,7 @@ public final class Solution {
 			//Write binaryToDecimal function
 			System.out.println(res);
 		}
+		
 	}
 	/**
 	 * { function_description }.
