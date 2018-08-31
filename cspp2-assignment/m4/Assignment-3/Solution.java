@@ -3,15 +3,15 @@ import java.util.Scanner;
  * do not modify this main function.
  * @author     Supriya
  */
-public final class Solution
-{/*
-Do not modify this main function.
+public final class Solution {
+/*
+*Do not modify this main function.
 
-@param      args  The arguments
+*@param      args  The arguments
 */
 	public static void main(final String[] args) {
 
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		for(int i= 0; i < n; i++){
 			String s = sc.next();
