@@ -4,9 +4,6 @@ import java.util.Scanner;
  * @author Supriya
  */
 public final class Solution {
-    /*
-     * Do not modify the main function
-     */
     private Solution() {
 
     //We are not using this constructor.
@@ -17,7 +14,6 @@ public final class Solution {
         String reverse = reverseString(s);
         System.out.println(reverse);
     }
-    
     static String reverseString(final String s) {
 
         String s1 = "";
