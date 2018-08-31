@@ -17,13 +17,7 @@ public final class Solution {
         String reverse = reverseString(s);
         System.out.println(reverse);
     }
-    //
-    // Write reverseString function
-    //
-    // @param      s     { parameter_description }
-    //
-    // @return     { description_of_the_return_value }
-    //
+    
     static String reverseString(final String s) {
 
         String s1 = "";
