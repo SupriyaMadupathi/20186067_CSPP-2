@@ -19,7 +19,6 @@ public final class Solution {
 			//Write binaryToDecimal function
 			System.out.println(res);
 		}
-		
 	}
 	/**
 	 * { function_description }.
@@ -31,7 +30,7 @@ public final class Solution {
 	static String binaryToDecimal(final String s) {
 
 		double j = 0;
-		for(int i = 0; i<s.length(); i++) {
+		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == '1') {
 				j = j + Math.pow(2, s.length() - 1 - i);
 			}
