@@ -11,7 +11,7 @@ public final class Solution {
     //We are not using this constructor.
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -22,7 +22,15 @@ public final class Solution {
         String reverse = reverseString(s);
         System.out.println(reverse);
     }
+    /**
+     * { function_description }.
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     static String reverseString(final String s) {
+
 
         String s1 = "";
         for (int i = s.length() - 1; i >= 0; i--) {
