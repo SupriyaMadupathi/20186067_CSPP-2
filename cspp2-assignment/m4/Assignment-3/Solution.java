@@ -4,6 +4,7 @@ import java.util.Scanner;
  * @author     Supriya
  */
 public final class Solution {
+
 /*
 *Do not modify this main function.
 
@@ -13,7 +14,7 @@ public final class Solution {
 
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		for(int i= 0; i < n; i++){
+		for (int i= 0; i < n; i++) {
 			String s = sc.next();
 			String res = binaryToDecimal(s);
 			//Write binaryToDecimal function
