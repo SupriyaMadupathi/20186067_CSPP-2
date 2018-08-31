@@ -11,7 +11,6 @@ public final class Solution {
 
     //We are not using this constructor.
     }
-    
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
@@ -34,5 +33,6 @@ public final class Solution {
         return s1;
         }
     }
+    
 
 
