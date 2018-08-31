@@ -3,9 +3,9 @@ import java.util.Scanner;
  *do not modify this main function.
  * @author Supriya
  */
-public final class Solution
-{/*
-    Do not modify the main function 
+public final class Solution {
+    /*
+    *Do not modify the main function 
     */
     private Solution() {
     //We are not using this constructor.
