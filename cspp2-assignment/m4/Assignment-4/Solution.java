@@ -17,7 +17,6 @@ public final class Solution {
         String s = sc.nextLine();
         String reverse = reverseString(s);
         System.out.println(reverse);
-        
     }
     //
     // Write reverseString function
