@@ -22,7 +22,7 @@ public final class Solution {
         int i, j, count = 0;
         for (i = 0; i < n; i++) {
             if (i % 2 != 0) {
-                for (j = 1; j <i ; j++) {
+                for (j = 1; j < i; j++) {
                     if (i % j == 0) {
                         count += 1;
                     }
