@@ -70,6 +70,7 @@ public class List {
      * class variables with some default values.
      */
     public List() {
+        
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -86,17 +87,17 @@ public class List {
 
     }
     /*
-     * The add method does what the name suggests.
-     * Add an int item to the list.
-     * The assumption is to store the item at the end of the list
-     * What is the end of the list?
-     * Is it the same as the end of the array?
-     * Think about how you can use the size variable to add item
-     * to the list.
+     * The add method does what the name suggests. Add an int item to the list.
+     * The assumption is to store the item at the end of the list What is the
+     * end of the list? Is it the same as the end of the array? Think about how
+     * you can use the size variable to add item to the list.
      *
      * The method returns void (nothing)
+     *
+     * @param      item  The item
      */
     public void add(final int item) {
+
         //Inserts the specified element at the end of the list.
         if (size < list.length) {
             list[size] = item;
@@ -137,6 +138,7 @@ public class List {
     public void remove(final int index) {
 
 
+
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -159,7 +161,7 @@ public class List {
      * items in the list? Would size variable be useful?
      * @param      index  The index
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int get(final int index) {
 
@@ -187,8 +189,7 @@ public class List {
      */
     public String toString() {
 
-
-        // Replace the code below
+     // Replace the code below
         String s = "[";
         int i;
         for (i = 0; i < size - 1; i++) {
@@ -207,6 +208,7 @@ public class List {
      * @return     { description_of_the_return_value }.
      */
     public boolean contains(final int item) {
+
 
         // Replace the code below
         for (int element : list) {
@@ -235,43 +237,7 @@ public class List {
         }
         return -1;
     }
-    /**
-     * { function_description }
-     *
-     * @param      item  The item
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int count(final int item) {
-
-        int count = 0;
-        for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
-                count++;
-            }
-        }
-        return count;
-
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      index  The index
-     * @param      item   The item
-     */
-    public void add(final int index, int item) {
-
-
-    }
-    /**
-     * Adds all.
-     *
-     * @param      items  The items
-     */
-    public void addAll(final int[] items) {
-
-
-    }
+ 
 
     /**
      * { function_description }.
