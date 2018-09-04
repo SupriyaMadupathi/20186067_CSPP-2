@@ -235,21 +235,41 @@ public class List {
         }
         return -1;
     }
-    public int count(int item) {
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
+
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
-                count ++;
+                count++;
             }
-            
         }
         return count;
 
     }
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
     public void add(final int index, int item) {
 
+
     }
+    /**
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(final int[] items) {
+
 
     }
 
