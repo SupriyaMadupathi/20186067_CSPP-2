@@ -6,7 +6,7 @@ import java.util.Scanner;
  */
 public class List {
 
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -29,8 +29,8 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     private int[] list;
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -95,7 +95,7 @@ public class List {
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         if (size < list.length) {
-        	list[size] = item;
+            list[size] = item;
             size++;
         }
 
@@ -138,12 +138,12 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-        	for (int i = index; i < size - 1; i++) {
-        	list[i] = list[i + 1];
+            for (int i = index; i < size - 1; i++) {
+            list[i] = list[i + 1];
         }
         size--;
     } else {
-    	System.out.println("Invalid Position Exception");
+        System.out.println("Invalid Position Exception");
     }
 }
 
@@ -191,8 +191,8 @@ public class List {
         String s = "[";
         int i;
         for (i = 0; i < size - 1; i++) {
-        	s = s + list[i] + ",";
-        	}
+            s = s + list[i] + ",";
+            }
         s = s + list[size -1] + "]";
         return s;
     } 
@@ -206,9 +206,9 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         for (int element : list) {
-        	if (element == item) {
-        		return true;
-        	}
+            if (element == item) {
+                return true;
+            }
         }
         return false;
     }
@@ -221,14 +221,14 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-        	if (list[i] == item) {
-        		return i;
-        	}
+            if (list[i] == item) {
+                return i;
+            }
         }
         return -1;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -264,12 +264,15 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                int n = l.get(Integer.parseInt(tokens[1]));
+                if (n != -1) {
+                    System.out.println(n);
+                }
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
             }
         }
-	}
+    }
 }
