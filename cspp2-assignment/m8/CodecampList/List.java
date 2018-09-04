@@ -1,7 +1,11 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 
+/**
+ * List of .
+ */
 public class List {
+
 	//Implement all the methods mentioned to build a ListADT
 
     /*
@@ -156,11 +160,11 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-       /* if (index >= 0 && index <= size - 1) {*/
+        if (index >= 0 && index <= size - 1) {
          return list[index];
         }
-        /*return -1;
-        }*/
+        return -1;
+        }
 
     /*
      * What happens when you print an object using println?
