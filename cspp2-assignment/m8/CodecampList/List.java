@@ -64,6 +64,11 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+
+    /**
+    *@variable TEN variable.
+    */
+    private static final int TEN = 10;
     public List() {
 
         // what are the two variables to be initialized here?
@@ -71,7 +76,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        this.list = new int[10];
+        this.list = new int[TEN];
         this.size = 0;
 
         // Think about the initial value for size.
@@ -113,6 +118,7 @@ public class List {
         return size;
 
     }
+    
 
     /*
      * The remove method does what the name suggests.
@@ -228,7 +234,13 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+
         // create an object of the list to invoke methods on it
         List l = new List();
 
