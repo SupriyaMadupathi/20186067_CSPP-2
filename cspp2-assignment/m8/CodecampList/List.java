@@ -52,7 +52,6 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
     private int size;
 
@@ -198,7 +197,7 @@ public class List {
         s = s + list[size - 1] + "]";
         return s;
     }
-    /**
+    /**.
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
