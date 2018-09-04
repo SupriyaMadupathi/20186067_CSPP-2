@@ -56,6 +56,11 @@ public class List {
      */
     private int size;
 
+    /**
+    *@variable TEN variable.
+    */
+    private static final int TEN = 10;
+
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -64,11 +69,6 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-
-    /**
-    *@variable TEN variable.
-    */
-    private static final int TEN = 10;
     public List() {
 
         // what are the two variables to be initialized here?
@@ -85,7 +85,6 @@ public class List {
         // That is the initial value to use for size.
 
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -94,10 +93,10 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         if (size < list.length) {
             list[size] = item;
@@ -107,18 +106,18 @@ public class List {
     }
 
     /*
-     * The size method returns the value of the size.
-     * The purpose of the method is to announce the size of the list
-     * to the objects outside the list
-     * 
-     * The method returns an int. Empty list should return 0.
+     * The size method returns the value of the size. The purpose of the method
+     * is to announce the size of the list to the objects outside the list
+     *
+     * The method returns an int. Empty list should return 0
+     *
+     * @return     { description_of_the_return_value }.
      */
     public int size() {
+
         // replace the code below to implement the size method
         return size;
-
     }
-    
 
     /*
      * The remove method does what the name suggests. Removes an int item,
@@ -133,9 +132,10 @@ public class List {
      * removed item, to the left So, the new array looks like this. array =
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
-     * @param      index  The index
+     * @param      index  The index.
      */
     public void remove(final int index) {
+
 
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -150,17 +150,19 @@ public class List {
 }
 
     /*
-     * Get method has to return the items that is
-     * at the index position passed as an argument to the method.
-     * If the item doesn't exist then return a -1 to indicate that
-     * there is no element at that index.
-     * How can an element not be there at a given position?
-     * Well, if the position is greater than the number of items
-     * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
-     * number of items in the list? Would size variable be useful?
+     * Get method has to return the items that is at the index position passed
+     * as an argument to the method. If the item doesn't exist then return a -1
+     * to indicate that there is no element at that index. How can an element
+     * not be there at a given position? Well, if the position is greater than
+     * the number of items in the list then that would mean the item doesn't
+     * exist. How do we check if the position is greater than the number of
+     * items in the list? Would size variable be useful?
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
+
         // Replace the code below to write the code for get
         if (index >= 0 && index <= size - 1) {
          return list[index];
@@ -185,6 +187,7 @@ public class List {
      */
     public String toString() {
 
+
         // Replace the code below
         String s = "[";
         int i;
@@ -201,7 +204,7 @@ public class List {
      *
      * @param      item  The item.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public boolean contains(final int item) {
 
@@ -223,6 +226,7 @@ public class List {
      * @return     { description_of_the_return_value }.
      */
     public int indexOf(final int item) {
+
      // Replace the code below
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -230,6 +234,23 @@ public class List {
             }
         }
         return -1;
+    }
+    public int count(int item) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                count ++;
+            }
+            
+        }
+        return count;
+
+    }
+    public void add(int index, int item) {
+
+    }
+    public void addAll(int[] items) {
+
     }
 
     /**
