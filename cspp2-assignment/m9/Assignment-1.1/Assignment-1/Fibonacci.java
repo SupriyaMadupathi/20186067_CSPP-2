@@ -20,9 +20,9 @@ import java.util.Scanner;
 /**
  * Class for fibonacci.
  */
-public class Fibonacci {
+public final class Fibonacci {
 
-   public Fibonacci() {
+   private Fibonacci() {
 
    }
     /*
