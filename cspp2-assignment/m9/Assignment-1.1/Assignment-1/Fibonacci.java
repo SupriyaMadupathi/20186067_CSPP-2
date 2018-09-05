@@ -22,7 +22,11 @@ import java.util.Scanner;
  */
 public final class Fibonacci {
 
+   /**
+    * Constructs the object.
+    */
    private Fibonacci() {
+
 
    }
     /*
@@ -73,3 +77,4 @@ public final class Fibonacci {
         System.out.println(fib(n));
     }
 }
+
