@@ -79,7 +79,7 @@ public class List {
         size = 0;
     }
     public List(int n) {
-        list = new int[n];
+    list = new int[n];
     }
 
     /*
