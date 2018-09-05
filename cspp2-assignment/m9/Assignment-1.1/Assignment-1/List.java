@@ -80,6 +80,7 @@ public class List {
     }
     public List(int n) {
     list = new int[n];
+    size = 0;
     }
 
     /*
