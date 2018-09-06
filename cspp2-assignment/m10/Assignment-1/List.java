@@ -58,6 +58,12 @@ public class List {
     // variable initialization should be done in the constructor
     private int size;
 
+    /**
+    *@variable TEN variable.
+    */
+    private static final int TEN = 10;
+
+
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -72,7 +78,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[TEN];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -96,7 +102,6 @@ public class List {
         size = 0;
         list = new int[capacity];
     }
-    
     /**
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
