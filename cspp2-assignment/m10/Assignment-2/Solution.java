@@ -53,8 +53,7 @@ public class Solution {
                 case "contains":
                 System.out.println(l.contains(tokens[1]));
                 break;
-                default:
-                    
+                default: 
             }
         }
 	}
