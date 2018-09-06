@@ -297,21 +297,19 @@ public class List {
      
      * @param      item   The item
      */
-    public void add(final int index, int item) {
-        if (index >= 0) {
-          for (int i = size; i> index; i--) {
-            list[i] = list[i-1];
-          }
-          list[index] = item;
-          size++;
-        } else if (list.length == size) {
+    public void add(final int index, final int item) {
+        if (index >= 0 && size < list.length) {
+            for (int j = size - 1; j >= index; j--) {
+                list[j + 1] = list[j];
+            }
+            list[index] = item;
+            size += 1;
+        } else if (index < 0) {
             System.out.println("Negative Index Exception");
         } else {
-            //resize(item);
             System.out.println("List is full");
         }
-
-}
+    }
     private void resize(int item) {
         this.list = Arrays.copyOf(this.list, list.length*2);
     }
