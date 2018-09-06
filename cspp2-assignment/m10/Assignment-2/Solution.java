@@ -3,6 +3,9 @@ import java.util.Scanner;
 //@ author: SupriyaMadupathi
 
 public class Solution {
+    private Solution() {
+        
+    }
 
     /**
      * { function_description }.
@@ -59,7 +62,7 @@ public class Solution {
                 case "contains":
                 System.out.println(l.contains(tokens[1]));
                 break;
-                default: 
+                default:
             }
         }
     }
