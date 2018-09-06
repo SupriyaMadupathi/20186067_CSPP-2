@@ -18,7 +18,6 @@ interface StringListInterface {
 }
 //Write a StringList class which implements StringListInterface
 /**
-* @author tezasrivishnu.
 */
 public class StringList implements StringListInterface {
     //Implement all the methods mentioned to build a ListADT
