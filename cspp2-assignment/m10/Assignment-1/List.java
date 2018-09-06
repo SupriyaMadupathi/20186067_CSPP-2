@@ -312,6 +312,7 @@ public class List {
     }
     private void resize(int item) {
         this.list = Arrays.copyOf(this.list, list.length*2);
+        list[size++] = item;
     }
         /**
      * Adds all.
