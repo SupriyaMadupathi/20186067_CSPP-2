@@ -3,7 +3,11 @@ import java.util.Scanner;
 import java.util.Arrays;
 //@ author SupriyaMadupathi
 
+/**
+ * List of.
+ */
 public class List {
+
     //Implement all the methods mentioned to build a ListADT
 
     /**
@@ -425,3 +429,5 @@ public class List {
         }
     }
 }
+
+
