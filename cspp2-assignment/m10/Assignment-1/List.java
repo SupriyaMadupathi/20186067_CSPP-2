@@ -33,7 +33,7 @@ public class List {
     // that's the job of the List constructor
     private int[] list;
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -62,16 +62,16 @@ public class List {
     *@variable TEN variable.
     */
     private static final int TEN = 10;
-
-
-    /*
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
 
+    /**
+     * Constructs the object.
+     */
     public List() {
+
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
