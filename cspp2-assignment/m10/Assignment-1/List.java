@@ -81,39 +81,35 @@ public class List {
         size = 0;
     }
 
-    /*
-     * Overloaded constructor with list capacity as argument
-     * The default constructor sets the list capacity to 10
-     * So, adding an item when the list size is 10
-     * raises a Index Out of Bounds Exception
-     * There will be some clients of the ADT that will require
-     * the list to contain n elements which is known
-     * at the time of creating the list.
-     * 
-     * The overloaded constructor is a way to initialize a list with
-     * a list capacity of n items where n is given as an argument to
-     * constructor.
-     * 
+    /**
+     * Overloaded constructor with list capacity as argument The default
+     * constructor sets the list capacity to 10 So, adding an item when the list
+     * size is 10 raises a Index Out of Bounds Exception There will be some
+     * clients of the ADT that will require the list to contain n elements which
+     * is known at the time of creating the list.
+     * The overloaded constructor is a way to initialize a list with a list
+     * capacity of n items where n is given as an argument to constructor.
+     * @param      capacity  The capacity.
      */
-    public List(int capacity) {
+    public List(final int capacity) {
+
         size = 0;
         list = new int[capacity];
     }
     
-    /*
-     * The add method does what the name suggests.
-     * Add an int item to the list.
-     * The assumption is to store the item at the end of the list
-     * What is the end of the list?
-     * Is it the same as the end of the array?
-     * Think about how you can use the size variable to add item
-     * to the list.
-     * 
+    /**
+     * The add method does what the name suggests. Add an int item to the list.
+     * The assumption is to store the item at the end of the list What is the
+     * end of the list? Is it the same as the end of the array? Think about how
+     * you can use the size variable to add item to the list.
+     *
      * The method returns void (nothing)
+     *
+     * @param      item  The item.
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
-        list[size++] = item;   
+        list[size++] = item;
     }
 
     /*
@@ -129,38 +125,38 @@ public class List {
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
      * using java.lang.System.arraycopy(...);
-     * 
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize().
+     * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
-     * 
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
-     *
+     * You know enough of Object Oriented Programming
+     * to answer these questions :-)
      */
 
     // todo create resize method
 
-    /*
-     * The size method returns the value of the size.
-     * The purpose of the method is to announce the size of the list
-     * to the objects outside the list
-     * 
+    /**
+     * The size method returns the value of the size. The purpose of the method
+     * is to announce the size of the list to the objects outside the list
+     *
      * The method returns an int. Empty list should return 0.
+     * @return     { description_of_the_return_value }
      */
     public int size() {
+
         return size;
     }
 
-    /*
+    /**
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
@@ -181,7 +177,13 @@ public class List {
      * The method returns void (nothing)
      */
 
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
+
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -194,7 +196,7 @@ public class List {
         }
     }
 
-    /*
+    /**
      * Get method has to return the items that is at the index position passed
      * as an argument to the method. If the item doesn't exist then return a -1
      * to indicate that there is no element at that index. How can an element
@@ -232,7 +234,7 @@ public class List {
      */
     public String toString() {
 
-        if (size == 0){
+        if (size == 0) {
             return "[]";
         }
         String s = "[";
