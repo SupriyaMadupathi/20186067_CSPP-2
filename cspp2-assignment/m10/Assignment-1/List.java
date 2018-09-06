@@ -236,16 +236,16 @@ public class List {
     public String toString() {
         if(size == 0)
             return "[]";
-        String str = "[";
+        String s = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
+            s = s + list[i] + ",";
         }
-        str = str + list[i] + "]";
+        s = s + list[i] + "]";
         if (list[0] == 0) {
-                str += "\nInvalid Position Exception";
+                s += "\nInvalid Position Exception";
             }
-        return str;
+        return s;
     }
     
     /*
