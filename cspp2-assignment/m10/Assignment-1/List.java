@@ -305,9 +305,10 @@ public class List {
           list[index] = item;
           size++;
         } else if (list.length == size) {
-            resize(item);
-        } else {
             System.out.println("Negative Index Exception");
+        } else {
+            //resize(item);
+            System.out.println("List is full");
         }
 
 }
