@@ -234,11 +234,11 @@ public class List {
      *
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0)
             return "[]";
         String s = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             s = s + list[i] + ",";
         }
         s = s + list[i] + "]";
@@ -248,32 +248,41 @@ public class List {
         return s;
     }
     
-    /*
-     * Contains return true if the list has
-     * the item passed as an argument to the method
-     * So, iterate through the list and return true if
-     * the item exists and otherwise false
+    /**
+     * Contains return true if the list has the item passed as an argument to
+     * the method So, iterate through the list and return true if the item
+     * exists and otherwise false
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }
      */
     public boolean contains(int item) {
+
         return indexOf(item) == -1;
     }
 
-    /*
-     * Returns the index of the first occurrence 
-     * of the specified element in this list,
-     * or -1 if this list does not contain the element.
+    /**
+     * Returns the index of the first occurrence of the specified element in
+     * this list, or -1 if this list does not contain the element.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+    public int indexOf(final int item) {
+
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
+   /*Inserts all the elements of specified int
     array to the end of list*/
       /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
@@ -294,7 +303,6 @@ public class List {
      * { function_description }.
      *
      * @param      index  The index
-     
      * @param      item   The item
      */
     public void add(final int index, final int item) {
@@ -310,8 +318,14 @@ public class List {
             System.out.println("List is full");
         }
     }
-    private void resize(int item) {
-        this.list = Arrays.copyOf(this.list, list.length*2);
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
+    private void resize(final int item) {
+
+        this.list = Arrays.copyOf(this.list, list.length * 2);
         list[size++] = item;
     }
         /**
@@ -336,7 +350,13 @@ public class List {
     }
 
 
-    public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -355,9 +375,8 @@ public class List {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else {
-                    if (t.length > 1){
+                } else {
+                    if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
@@ -400,6 +419,7 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default :
             }
         }
     }
