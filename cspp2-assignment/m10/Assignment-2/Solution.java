@@ -2,9 +2,15 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 //@ author: SupriyaMadupathi
 
-public class Solution {
+/**
+ * Class for solution.
+ */
+public final class Solution {
+
+    /**
+     * Constructs the object.
+     */
     private Solution() {
-        
     }
 
     /**
