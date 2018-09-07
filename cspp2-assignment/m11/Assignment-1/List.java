@@ -204,18 +204,18 @@ public class List {
         this.list = Arrays.copyOf(this.list, list.length * 2);
         list[size++] = item;
     }
-    public void addAll(final int[] items) {
-        int a = items.length;
+    public void addAll(final int[] newArray) {
+        int a = newArray.length;
         int x = 0;
         if ((size + a) <= list.length) {
             for (int j = size; j < (size + a); j++) {
-                list[j] = items[x];
+                list[j] = newArray[x];
                 x += 1;
             }
             size += a;
         } else {
             for (int i = 0; i < a; i++) {
-                resize(items[i]);
+                resize(newArray[i]);
             }
         }
     }
