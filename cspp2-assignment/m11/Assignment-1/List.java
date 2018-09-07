@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
@@ -25,7 +26,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
+    private int[] list;
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -49,7 +50,7 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
+    private int size;
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -58,17 +59,32 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**
+    *@variable TEN variable.
+    */
+    private static final int TEN = 10;
+    /**
+     * The purpose of the constructor is to initialize the
+     * class variables with some default values.
+     */
+
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
+        list = new int[TEN];
+
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
+        size = 0;
 
     }
     
@@ -80,9 +96,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
-        //Inserts the specified element at the end of the list.
+    public void add(final int item) {
+        //Inserts the specified element at the end of the zelist.
+        list[size++] = item;
     }
+
 
     /*
      * The size method returns the value of the size. The purpose of the method
@@ -93,7 +111,7 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method
-        return -1;
+        return size;
     }
 
     /*
@@ -110,9 +128,18 @@ public class List {
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
-    public void remove(int index) {
-        // write the logic for remove here. Think about what to do to the size
-        // variable.
+    public void remove(final int index) {
+
+        // write the logic for remove here.
+        // Think about what to do to the size variable.
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
+        }
     }
 
     /*
@@ -124,9 +151,13 @@ public class List {
      * exist. How do we check if the position is greater than the number of
      * items in the list? Would size variable be useful?
      */
-    public int get(int index) {
-        // Replace the code below to write the code for get
-        return -1;
+    public int get(final int index) {
+
+        if (index < 0 || index >= size) {
+            return -1;
+        } else {
+            return list[index];
+        }
     }
 
     /*
@@ -142,33 +173,66 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
      * the list and not all the elements of the array.
      */
-    public String toString() {
-        // Replace the code below
-        return "print the list";
+   public String toString() {
+
+        if (size == 0) {
+            return "[]";
+        }
+        String s = "[";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            s = s + list[i] + ",";
+        }
+        s = s + list[i] + "]";
+        if (list[0] == 0) {
+                s += "\nInvalid Position Exception";
+            }
+        return s;
     } 
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
-    public boolean contains(int item) {
-        // Replace the code below
-        return true;
+    public boolean contains(final int item) {
+
+        return indexOf(item) == -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
-        // Replace the code below
+    public int indexOf(final int item) {
+
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                return i;
+            }
+        }
         return -1;
     }
     /*
     Inserts all the elements of specified int array to the end of list    
     */
-    public void addAll(int[] newArray)
-    {
-        // write the logic
+    private void resize(final int item) {
+
+        this.list = Arrays.copyOf(this.list, list.length * 2);
+        list[size++] = item;
+    }
+    public void addAll(final int[] newArray) {
+        int a = newArray.length;
+        int x = 0;
+        if ((size + a) <= list.length) {
+            for (int j = size; j < (size + a); j++) {
+                list[j] = newArray[x];
+                x += 1;
+            }
+            size += a;
+        } else {
+            for (int i = 0; i < a; i++) {
+                resize(newArray[i]);
+            }
+        }
     }
     /*
      Removes all of its elements that are contained in the specified int 
@@ -176,8 +240,13 @@ public class List {
     */
      public void removeAll(int[] newArray)
      {
-        // write the logic 
+       /* // write the logic
+        for (int i = 0; i < newArray; i++) {
 
+
+        	
+        }
+*/
      }
     /*
     Returns a list object containing elements, including startIndex and
@@ -189,6 +258,7 @@ public class List {
     public List subList(int start, int end) 
     {
     // write the logic for subList
+
     return new List();
     }
     /*
@@ -198,8 +268,14 @@ public class List {
     public boolean equals(List list ) 
     {
     // Replace the code below
-    return true;
-    }
+    	int j = 0;
+    	for (int i = 0; i < list.size(); i++) {
+    		if (contains(list.get(i))) {
+    			j++;
+                }
+  }
+    			return (j == list.size());
+}
     /*
     * Removes all the elements from list
     * Think about this case and make the method
@@ -208,6 +284,7 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
+    	size = 0;
 
     }
 
