@@ -1,19 +1,21 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-/*@author Nehru Perumalla.
- */
+//@ author SupriyaMadupathi
+//
+// A Class is implemented for Student details
+//
 /**
  * Class for student.
  */
 class Student {
     /**
-     *  String Name .
+     * { String Name }.
      */
     private String name;
     /**
      * Constructs the object.
      *
-     * @param      name1
+     * @param      name1  The name 1
      */
     Student(final String name1) {
         this.name = name1;
@@ -24,13 +26,12 @@ class Student {
      * @return     The name.
      */
     String getName() {
-
         return this.name;
     }
     /**
-     * HashCode .
+     * { HashCode }.
      *
-     * @return      return Integer .
+     * @return     { return Integer }.
      */
     public int hashCode() {
         return 0;
@@ -65,9 +66,9 @@ public final class Solution {
         //Empty Constructor.
     }
     /**
-     * List Integer .
+     * { List Integer }.
      *
-     * @param      stdin
+     * @param      stdin  The stdin
      */
     public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
@@ -165,7 +166,7 @@ public final class Solution {
         }
     }
     /**
-     * List Double .
+     * { List Double }.
      *
      * @param      stdin  The stdin
      */
