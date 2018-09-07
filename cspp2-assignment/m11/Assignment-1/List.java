@@ -269,18 +269,21 @@ public class List {
     */
     public List subList(int start, int end) 
     {
+     List newlist = new List();
     // write the logic for subList
     	if (start >= -1) {
-    		if (start >= end || start == -1 || end == -1) {
+    		if (start == end  || start == end - 1
+                || start > end || start == -1) {
     			System.out.println("Index Out of Bounds Exception");
-    			return null;
     			} else {
-    				List newlist = new List();
-    			}
-    		
-    	}
-
-    			return new List();
+                for (int i = start; i < end; i++) {
+                    newlist.add(list[i]);
+                }
+                return newlist;
+            }
+        }
+        /*System.out.println("Index Out of Bounds Exception");*/
+        return null;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
