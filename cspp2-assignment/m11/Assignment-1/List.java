@@ -253,15 +253,14 @@ public class List {
     public boolean equals(List list ) 
     {
     // Replace the code below
+    	int j = 0;
     	for (int i = 0; i < list.size(); i++) {
-    		for (int j = i+1; j < list.size(); j++) {
-    			 if(i == j) {
-                    return true;
+    		if (contains(list.get(i))) {
+    			j++;
                 }
   }
+    			return (j == list.size());
 }
-    return false;
-    }
     /*
     * Removes all the elements from list
     * Think about this case and make the method
