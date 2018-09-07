@@ -220,18 +220,22 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
+    
+    @param      item  The item
     */
     private void resize(final int item) {
 
         this.list = Arrays.copyOf(this.list, list.length * 2);
         list[size++] = item;
     }
+    /**
+     * Adds all.
+     *
+     * @param      newArray  The new array
+     */
     public void addAll(final int[] newArray) {
-        /*for (int i =0; i < newArray.length; i++) {
-            add(newArray);
-            
-        }*/
+
         int a = newArray.length;
         int x = 0;
         if ((size + a) <= list.length) {
@@ -246,24 +250,20 @@ public class List {
             }
         }
     }
-    /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+    /**
+     Removes all of its elements that are contained in the specified int array.
+     @param      newArray  The new array
     */
-     public void removeAll(int[] newArray)
-     {
+     public void removeAll(final int[] newArray) {
+
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
                 remove(i);
                 index = indexOf(newArray[i]);
-            }
-
-
-            
+            }   
         }
-
      }
     /**
     Returns a list object containing elements, including startIndex and
@@ -296,7 +296,7 @@ public class List {
     /**
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
-    @param      list  The list.   
+    @param      list  The list.
     @return     returns boolean value.
     */
     public boolean equals(final List list) {
