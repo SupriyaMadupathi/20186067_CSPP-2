@@ -270,6 +270,7 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
+    	size = 0;
 
     }
 
