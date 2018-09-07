@@ -36,7 +36,7 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -93,7 +93,7 @@ public class List {
 
     }
     
-    /*
+    /**
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
      * end of the list? Is it the same as the end of the array? Think about how
@@ -109,12 +109,9 @@ public class List {
      */
     public void add(final int item) {
 
-        //Inserts the specified element at the end of the zelist
-        
+        //Inserts the specified element at the end of the zelist   
         list[size++] = item;
     }
-
-
     /**
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
@@ -212,9 +209,9 @@ public class List {
                 s += "\nInvalid Position Exception";
             }*/
         return s;
-    } 
+    }
     /**
-     * Contains return true if the list has the item passed as an argument to
+     * Contains return true if the list has the item passed as an argument to.
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      *
@@ -244,7 +241,7 @@ public class List {
         return -1;
     }
     /**
-    Inserts all the elements of specified int array to the end of list
+    Inserts all the elements of specified int array to the end of list.
     @param      item  The item
     */
     private void resize(final int item) {
@@ -285,7 +282,7 @@ public class List {
             while (index != -1) {
                 remove(i);
                 index = indexOf(newArray[i]);
-            } 
+            }
         }
      }
     /**
@@ -319,7 +316,7 @@ public class List {
     /**
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
-    @param      list  The list.
+    @param      list1  The list.
     @return     returns boolean value.
     */
     public boolean equals(final List list1) {
@@ -415,7 +412,7 @@ public class List {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": 
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -426,7 +423,6 @@ public class List {
                         System.out.println(object);
                     }
                     break;
-                
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
