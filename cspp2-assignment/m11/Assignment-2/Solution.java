@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 class Student {
     /**
-     * { String Name }.
+     * String Name .
      */
     private String name;
     /**
@@ -29,7 +29,7 @@ class Student {
         return this.name;
     }
     /**
-     * { HashCode }.
+     *  HashCode.
      *
      * @return     { return Integer }.
      */
@@ -66,7 +66,7 @@ public final class Solution {
         //Empty Constructor.
     }
     /**
-     * { List Integer }.
+     * List Integer.
      *
      * @param      stdin  The stdin
      */
@@ -166,7 +166,7 @@ public final class Solution {
         }
     }
     /**
-     * { List Double }.
+     * List Double.
      *
      * @param      stdin  The stdin
      */
@@ -265,7 +265,7 @@ public final class Solution {
         }
     }
     /**
-     * { List Float }.
+     * List Float.
      *
      * @param      stdin  The stdin
      */
@@ -364,7 +364,7 @@ public final class Solution {
         }
     }
     /**
-     * { List String }.
+     * List String .
      *
      * @param      stdin  The stdin
      */
@@ -550,7 +550,7 @@ public final class Solution {
         }
     }
     /**
-     * { Main Function }.
+     * Main Function.
      *
      * @param      args  The arguments
      */
@@ -587,4 +587,3 @@ public final class Solution {
         }
     }
 }
-
