@@ -228,10 +228,10 @@ public class List {
         list[size++] = item;
     }
     public void addAll(final int[] newArray) {
-    	/*for (int i =0; i < newArray.length; i++) {
-    		add(newArray);
-    		
-    	}*/
+        /*for (int i =0; i < newArray.length; i++) {
+            add(newArray);
+            
+        }*/
         int a = newArray.length;
         int x = 0;
         if ((size + a) <= list.length) {
@@ -254,14 +254,14 @@ public class List {
      {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
-        	int index = indexOf(newArray[i]);
-        	while (index != -1) {
-        		remove(i);
-        		index = indexOf(newArray[i]);
-        	}
+            int index = indexOf(newArray[i]);
+            while (index != -1) {
+                remove(i);
+                index = indexOf(newArray[i]);
+            }
 
 
-        	
+            
         }
 
      }
@@ -272,15 +272,14 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end) 
-    {
+    public List subList(int start, int end) {
      List newlist = new List();
     // write the logic for subList
-    	if (start >= -1) {
-    		if (start == end  || start == end - 1
+        if (start >= -1) {
+            if (start == end  || start == end - 1
                 || start > end || start == -1) {
-    			System.out.println("Index Out of Bounds Exception");
-    			} else {
+                System.out.println("Index Out of Bounds Exception");
+                } else {
                 for (int i = start; i < end; i++) {
                     newlist.add(list[i]);
                 }
@@ -293,33 +292,29 @@ public class List {
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
+    
+    @param      list  The list
+    
+    @return     returns boolean value.
     */
-    public boolean equals(List list ) 
-    {
+    public boolean equals(final List list) {
+
     // Replace the code below
-    	return list.toString().equals(this.toString());
-    	/*int j = 0;
-    	for (int i = 0; i < list.size(); i++) {
-    		if (contains(list.get(i))) {
-    			j++;
-                }
-  }
-    			return (j == list.size());*/
+        return list.toString().equals(this.toString());
 }
     /**
     * Removes all the elements from list
     * Think about this case and make the method
     * the simpler.
     */
-    public void clear()
-    {
+    public void clear() {
     // write the logic for clear.
-    	size = 0;
+        size = 0;
 
     }
 
     /**
-     * this is main
+     * this is main.
      *
      * @param      args  The arguments
      */
@@ -397,7 +392,7 @@ public class List {
                 break;
                 case "subList": {
                     if (tokens.length != 2) {
-                    	break;
+                        break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
