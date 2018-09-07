@@ -102,26 +102,34 @@ public class List {
      * The method returns void (nothing)
      */
 
+    /**
+     * adds elements
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
+
         //Inserts the specified element at the end of the zelist
         
         list[size++] = item;
     }
 
 
-    /*
+    /**
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
      *
+     * @return     returns size
      */
     public int size() {
+
         // replace the code below to implement the size method
         return size;
     }
 
-    /*
+    /**
      * The remove method does what the name suggests. Removes an int item,
      * specified by the index argument, from the list It also does an additional
      * step. Think about what happens when an item is removed from the middle of
@@ -130,11 +138,11 @@ public class List {
      * the left by one position. Here is an example: array =
      * [1,2,3,0,0,0,0,0,0,0] remove(1) would remove the item 2 which is at index
      * position 1. But how do you remove the item from an array? Well, the way
-     * to rem
-     * ove it is to move all the items, that are to the right of the
+     * to rem ove it is to move all the items, that are to the right of the
      * removed item, to the left So, the new array looks like this. array =
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
+     * @param      index  The index
      */
     public void remove(final int index) {
 
@@ -150,7 +158,7 @@ public class List {
         }
     }
 
-    /*
+    /**
      * Get method has to return the items that is at the index position passed
      * as an argument to the method. If the item doesn't exist then return a -1
      * to indicate that there is no element at that index. How can an element
@@ -158,8 +166,13 @@ public class List {
      * the number of items in the list then that would mean the item doesn't
      * exist. How do we check if the position is greater than the number of
      * items in the list? Would size variable be useful?
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
+
 
         if (index < 0 || index >= size) {
             return -1;
@@ -168,7 +181,7 @@ public class List {
         }
     }
 
-    /*
+    /**
      * What happens when you print an object using println? Java provides a
      * method named toString that is internally invoked when an object variable
      * is used in println. For example: List l = new List();
@@ -180,8 +193,11 @@ public class List {
      * the string [1,2,3] Caution: The array may be having other elements
      * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
      * the list and not all the elements of the array.
+     *
+     * @return     String representation of the object.
      */
    public String toString() {
+
 
         if (size == 0) {
             return "[]";
@@ -197,18 +213,26 @@ public class List {
             }*/
         return s;
     } 
-    /*
+    /**
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
 
         return indexOf(item) == -1;
     }
-    /*
+    /**
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public int indexOf(final int item) {
 
@@ -219,9 +243,8 @@ public class List {
         }
         return -1;
     }
-    /*
+    /**
     Inserts all the elements of specified int array to the end of list
-    
     @param      item  The item
     */
     private void resize(final int item) {
@@ -262,7 +285,7 @@ public class List {
             while (index != -1) {
                 remove(i);
                 index = indexOf(newArray[i]);
-            }   
+            } 
         }
      }
     /**
