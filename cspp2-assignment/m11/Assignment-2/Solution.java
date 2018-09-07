@@ -13,7 +13,7 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name1 
+     * @param      name1
      */
     Student(final String name1) {
         this.name = name1;
@@ -66,7 +66,7 @@ public final class Solution {
     /**
      * List Integer .
      *
-     * @param      stdin  
+     * @param      stdin
      */
     public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
