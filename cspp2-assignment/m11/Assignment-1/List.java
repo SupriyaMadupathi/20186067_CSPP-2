@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -32,6 +32,7 @@ public class List {
      *
     */
     private int[] list;
+
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -53,7 +54,6 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
     private int size;
     // declare a private int size
@@ -92,7 +92,6 @@ public class List {
         size = 0;
 
     }
-    
     /**
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -103,13 +102,13 @@ public class List {
      */
 
     /**
-     * adds elements
+     * adds elements.
      *
      * @param      item  The item
      */
     public void add(final int item) {
 
-        //Inserts the specified element at the end of the zelist   
+        //Inserts the specified element at the end of the zelist
         list[size++] = item;
     }
     /**
