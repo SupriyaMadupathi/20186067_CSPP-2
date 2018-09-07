@@ -24,6 +24,7 @@ class Student {
      * @return     The name.
      */
     String getName() {
+
         return this.name;
     }
     /**
