@@ -96,8 +96,10 @@ public class List {
      *
      * The method returns void (nothing)
      */
+
     public void add(final int item) {
-        //Inserts the specified element at the end of the zelist.
+        //Inserts the specified element at the end of the zelist
+        
         list[size++] = item;
     }
 
@@ -123,7 +125,8 @@ public class List {
      * the left by one position. Here is an example: array =
      * [1,2,3,0,0,0,0,0,0,0] remove(1) would remove the item 2 which is at index
      * position 1. But how do you remove the item from an array? Well, the way
-     * to remove it is to move all the items, that are to the right of the
+     * to rem
+     * ove it is to move all the items, that are to the right of the
      * removed item, to the left So, the new array looks like this. array =
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
@@ -133,7 +136,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
+            for (int i = index; i <= size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -179,7 +182,7 @@ public class List {
             return "[]";
         }
         String s = "[";
-        int i = 0;
+        int i;
         for (i = 0; i < size - 1; i++) {
             s = s + list[i] + ",";
         }
@@ -196,7 +199,7 @@ public class List {
      */
     public boolean contains(final int item) {
 
-        return indexOf(item) == 1;
+        return indexOf(item) == -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
@@ -220,6 +223,10 @@ public class List {
         list[size++] = item;
     }
     public void addAll(final int[] newArray) {
+    	/*for (int i =0; i < newArray.length; i++) {
+    		add(newArray);
+    		
+    	}*/
         int a = newArray.length;
         int x = 0;
         if ((size + a) <= list.length) {
@@ -240,13 +247,18 @@ public class List {
     */
      public void removeAll(int[] newArray)
      {
-       /* // write the logic
-        for (int i = 0; i < newArray; i++) {
+        // write the logic
+        for (int i = 0; i < newArray.length; i++) {
+        	int index = indexOf(newArray[i]);
+        	while (index != -1) {
+        		remove(i);
+        		index = indexOf(newArray[i]);
+        	}
 
 
         	
         }
-*/
+
      }
     /*
     Returns a list object containing elements, including startIndex and
@@ -258,8 +270,17 @@ public class List {
     public List subList(int start, int end) 
     {
     // write the logic for subList
+    	if (start >= -1) {
+    		if (start >= end || start == -1 || end == -1) {
+    			System.out.println("Index Out of Bounds Exception");
+    			return null;
+    			} else {
+    				List newlist = new List();
+    			}
+    		
+    	}
 
-    return new List();
+    			return new List();
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -268,13 +289,14 @@ public class List {
     public boolean equals(List list ) 
     {
     // Replace the code below
-    	int j = 0;
+    	return list.toString().equals(this.toString());
+    	/*int j = 0;
     	for (int i = 0; i < list.size(); i++) {
     		if (contains(list.get(i))) {
     			j++;
                 }
   }
-    			return (j == list.size());
+    			return (j == list.size());*/
 }
     /*
     * Removes all the elements from list
