@@ -196,7 +196,7 @@ public class List {
      */
     public boolean contains(final int item) {
 
-        return indexOf(item) == -1;
+        return indexOf(item) == 1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
