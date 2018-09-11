@@ -73,7 +73,9 @@ class SortedSet extends Set {
         }
     }
 }
-
+/**
+ * Solution class.
+ */
 public final class Solution {
     /**
      * Constructs the object.
