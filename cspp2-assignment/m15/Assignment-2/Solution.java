@@ -195,20 +195,20 @@ public final class Solution {
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
             case "subSet":
-            try {
 
                 if (tokens.length != 2) {
                     break;
                 }
                 String[] arrstring3 = tokens[1].split(",");
+            try {
                 int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
                     System.out.println(Arrays.toString(object).replace("[",
                         "{").replace("]", "}"));
-                break;
-            } catch (Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
+                break;
             case "headSet":
             try {
 
