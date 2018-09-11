@@ -73,13 +73,13 @@ class SortedSet extends Set  {
         int temp = 0;
         if (size == 0) {
             throw new Exception("Set Empty Exception");
-        }
-        for (int i = 0; i < size; i++) {
+        } else {
+            for (int i = 0; i < size; i++) {
             if (set[i] < end) {
                 result[i] = set[i];
                 temp++;
             }
-        }
+        }}
         return Arrays.copyOf(result, temp);
     }
     /**
