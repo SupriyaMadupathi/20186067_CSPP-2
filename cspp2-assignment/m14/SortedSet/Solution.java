@@ -66,7 +66,11 @@ class SortedSet extends Set {
         }
         return set[size - 1];
     }
-   
+    /**
+     * Adds all.
+     *
+     * @param      element  The element
+     */
     public void addAll(final int[] element) {
         for (int i : element) {
             this.add(i);
