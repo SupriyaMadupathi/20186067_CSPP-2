@@ -46,7 +46,8 @@ class SortedSet extends Set  {
         if (start > end) {
             throw new Exception ("Invalid Arguments to Subset Exception");
            /* return null;*/
-        }
+        }else {
+            
         int[] result = new int[size];
         int k = 0;
         for (int i = 0; i < size; i++) {
@@ -60,6 +61,7 @@ class SortedSet extends Set  {
             }
         }
         return Arrays.copyOf(result, k);
+        }
     }
     /**
      * headset function.
