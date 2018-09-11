@@ -79,15 +79,19 @@ class SortedSet extends Set  {
                 result[i] = set[i];
                 temp++;
             }
-        }}
+        }
+    }
         return Arrays.copyOf(result, temp);
     }
     /**
      * last function.
      *
      * @return     returns list of elements.
+     *
+     * @throws     Exception  set empty Exception
      */
     public int last() throws Exception {
+
         if (size == 0) {
             throw new Exception("Set Empty Exception");
             /*return -1;*/
