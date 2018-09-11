@@ -81,7 +81,13 @@ public final class Solution {
     private Solution() {
 
     }
-   
+    /**
+     * helper function to convert string input to int array.
+     *
+     * @param      s     { string input from test case file }
+     *
+     * @return     { int array from the given string }
+     */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
@@ -94,7 +100,11 @@ public final class Solution {
                .mapToInt(Integer::parseInt)
                .toArray();
     }
-    
+    /**
+     * main function to execute test cases.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // instantiate this set
         SortedSet s = new SortedSet();
