@@ -138,7 +138,9 @@ public class Solution {
      * removed item, to the left So, the new array looks like this. array =
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { Invalid Position Exception }
      */
     public void remove(final int index) throws Exception {
 
@@ -281,7 +283,7 @@ public class Solution {
             while (index != -1) {
                 try {
                 remove(i);
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 index = indexOf(newArray[i]);
@@ -297,9 +299,7 @@ public class Solution {
     
     @param      start      The start
     @param      end        The end
-    
     @return     a new list
-    
     @throws     Exception  the exception
     */
     public Solution subList(final int start, final int end) throws Exception {
@@ -321,11 +321,11 @@ public class Solution {
         return null;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { the count}
      */
     public int count(final int item) {
 
