@@ -37,14 +37,17 @@ class SortedSet extends Set  {
     /**
      * subset.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      The start
+     * @param      end        The end
      *
      * @return     from start to end returns elements.
+     *
+     * @throws     Exception  {Invalid Arguments to Subset Exception }
      */
     public int[] subSet(final int start, final int end) throws Exception {
+
         if (start > end) {
-            throw new Exception ("Invalid Arguments to Subset Exception");
+            throw new Exception("Invalid Arguments to Subset Exception");
         } else {
         int[] result = new int[size];
         int k = 0;
