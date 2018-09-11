@@ -6,7 +6,11 @@ import java.util.Arrays;
  * Class for sorted set.
  */
 class SortedSet extends Set {
-    
+    /**
+     * sort function.
+     *
+     * @param      array  The array
+     */
     public void sort(final int[] array) {
         int t;
         for (int i = 0; i < size; i++) {
@@ -19,7 +23,11 @@ class SortedSet extends Set {
             }
         }
     }
-    
+    /**
+     * add function.
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         if (!contains(item)) {
             set[size++] = item;
