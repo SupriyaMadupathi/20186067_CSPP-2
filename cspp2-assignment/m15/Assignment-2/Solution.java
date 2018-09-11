@@ -211,13 +211,13 @@ public final class Solution {
                 break;
             case "headSet":
 
-                if (tokens.length != 2) {
-                    break;
-                }
             try {
+                if (tokens.length != 2) {
+                   /* break;*/
                     int[] obj = s.headSet(Integer.parseInt(tokens[1]));
                         System.out.println(Arrays.toString(obj).replace("[",
                             "{").replace("]", "}"));
+                }
                 } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
