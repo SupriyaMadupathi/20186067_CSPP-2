@@ -71,7 +71,7 @@ class SortedSet extends Set  {
     public int[] headSet(final int end) throws Exception {
         int[] result = new int[size];
         int temp = 0;
-        if (size() == 0) {
+        if (this.size == 0) {
             throw new Exception("Set Empty Exception");
         } else {
             for (int i = 0; i < size; i++) {
@@ -211,13 +211,13 @@ public final class Solution {
                 break;
             case "headSet":
 
-            try {
                 if (tokens.length != 2) {
-                   /* break;*/
+                    break;
+                }
+            try {
                     int[] obj = s.headSet(Integer.parseInt(tokens[1]));
                         System.out.println(Arrays.toString(obj).replace("[",
                             "{").replace("]", "}"));
-                }
                 } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
