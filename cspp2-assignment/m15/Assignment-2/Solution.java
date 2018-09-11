@@ -45,9 +45,7 @@ class SortedSet extends Set  {
     public int[] subSet(final int start, final int end) throws Exception {
         if (start > end) {
             throw new Exception ("Invalid Arguments to Subset Exception");
-           /* return null;*/
-        }else {
-            
+        } else {
         int[] result = new int[size];
         int k = 0;
         for (int i = 0; i < size; i++) {
@@ -205,10 +203,8 @@ public final class Solution {
                 String[] arrstring3 = tokens[1].split(",");
                 int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
-                if (object != null) {
                     System.out.println(Arrays.toString(object).replace("[",
                         "{").replace("]", "}"));
-                }
                 break;
             } catch (Exception ex) {
                     System.out.println(ex.getMessage());
@@ -220,10 +216,8 @@ public final class Solution {
                     break;
                 }
                 int[] obj = s.headSet(Integer.parseInt(tokens[1]));
-                if (obj != null) {
                     System.out.println(Arrays.toString(obj).replace("[",
                         "{").replace("]", "}"));
-                }
                 break;
             } catch (Exception ex) {
                     System.out.println(ex.getMessage());
