@@ -12,9 +12,9 @@ class SortedSet extends Set {
         for (int i = 0; i < size; i++) {
             for (int j = i + 1; j < size; j++) {
                 if (array[i] > array[j]) {
-                    t = array[j];
+                    t = array[i];
                     array[i] = array[j];
-                    array[i] = t;
+                    array[j] = t;
                 }
             }
         }
