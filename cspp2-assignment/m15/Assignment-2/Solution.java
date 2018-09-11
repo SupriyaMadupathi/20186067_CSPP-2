@@ -210,18 +210,18 @@ public final class Solution {
                 }
                 break;
             case "headSet":
-            try {
 
                 if (tokens.length != 2) {
                     break;
                 }
-                int[] obj = s.headSet(Integer.parseInt(tokens[1]));
-                    System.out.println(Arrays.toString(obj).replace("[",
-                        "{").replace("]", "}"));
-                break;
-            } catch (Exception ex) {
+            try {
+                    int[] obj = s.headSet(Integer.parseInt(tokens[1]));
+                        System.out.println(Arrays.toString(obj).replace("[",
+                            "{").replace("]", "}"));
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
+                break;
             case "last":
             try {
 
