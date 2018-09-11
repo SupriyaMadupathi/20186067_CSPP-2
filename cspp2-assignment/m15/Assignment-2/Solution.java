@@ -230,10 +230,10 @@ public final class Solution {
                 }
                 int temp = s.last();
                 System.out.println(temp);
-                break;
             } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
+                break;
             case "addAll":
                 int[] intArr = intArray(tokens[1]);
                 if (intArr.length == 1) {
