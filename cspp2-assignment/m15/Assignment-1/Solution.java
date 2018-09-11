@@ -279,9 +279,8 @@ public class Solution {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
-                try{
+                try {
                 remove(i);
-                    
                 } catch(Exception ex) {
                     System.out.println(ex.getMessage());
                 }
@@ -295,9 +294,13 @@ public class Solution {
     second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
-    @param      start  The start
-    @param      end    The end
-    @return     { description_of_the_return_value }
+    
+    @param      start      The start
+    @param      end        The end
+    
+    @return     a new list
+    
+    @throws     Exception  the exception
     */
     public Solution subList(final int start, final int end) throws Exception {
 
@@ -317,6 +320,13 @@ public class Solution {
         /*System.out.println("Index Out of Bounds Exception");*/
         return null;
     }
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item) {
 
         int count = 0;
@@ -385,12 +395,11 @@ public class Solution {
                     System.out.println(l);
                 break;
                 case "remove":
-                try{
+                try {
                     if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
-                    
                     }
-                }catch(Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
 
@@ -447,8 +456,8 @@ public class Solution {
                             Integer.parseInt(arrstring3[1]));
                     if (object != null) {
                         System.out.println(object);
-                    } 
-                }catch(Exception ex) {
+                    }
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                     break;
