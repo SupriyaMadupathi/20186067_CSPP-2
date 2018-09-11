@@ -71,7 +71,7 @@ class SortedSet extends Set  {
     public int[] headSet(final int end) throws Exception {
         int[] result = new int[size];
         int temp = 0;
-        if (this.size == 0) {
+        if (size == 0 || end < 0) {
             throw new Exception("Set Empty Exception");
         } else {
             for (int i = 0; i < size; i++) {
