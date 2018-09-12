@@ -249,10 +249,10 @@ class BookYourShow {
             String[] bookedseats = p.getBookedseats();
             for (int i = 0; i < seats.length; i++) {
                 for (int j = 0; j < bookedseats.length; j++) {
-                    /*if (seats[i].equals(bookedseats[j])
+                    if (seats[i].equals(bookedseats[j])
                         && !seats[i].equals("N/A")) {
                         seats[i] = "N/A";
-                    }*/
+                    }
                 }
             }
         } else {
