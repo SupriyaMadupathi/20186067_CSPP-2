@@ -1,4 +1,3 @@
-
 18
 Item greentea,128,120
 Item Eggs,65,5
