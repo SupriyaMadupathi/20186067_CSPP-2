@@ -78,16 +78,16 @@ class Item {
 	public void removeFromCart(Item item) {
 		for (int i = 0; i < cartsize; i++) {
 			if (item.equals(cart[i])) {
-				/*cart[i].quantity = cart[i].quantity - item.quantity;*/
+				cart[i].quantity = cart[i].quantity - item.quantity;
 			}	
 		}		
 	}
 	public void showCart() {
 		for(Item i : cart) {
 			if (i != null) {
-				if (i.quantity != 0) {
+				/*if (i.quantity != 0) {
 					System.out.println(i.productName+ " " + i.quantity);
-				}
+				}*/
 			}
 		}
 	}
