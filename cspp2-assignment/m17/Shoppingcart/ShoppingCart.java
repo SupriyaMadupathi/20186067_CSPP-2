@@ -1,7 +1,7 @@
 /**.
  * { item_description }
  */
-import java.util.Scanner;
+import java.util.*;
 /**.
  * Class for item.
  */
