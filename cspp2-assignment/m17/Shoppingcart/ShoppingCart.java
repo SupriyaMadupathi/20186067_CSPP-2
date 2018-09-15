@@ -259,7 +259,6 @@ class ShoppingCart {
      *
      * @param      args  The arguments
      */
-    class Solution {
     public static void main(final String[] args) {
         ShoppingCart sc = new ShoppingCart();
         Scanner scan = new Scanner(System.in);
@@ -314,5 +313,4 @@ class ShoppingCart {
 
         }
     }
-}
 }
