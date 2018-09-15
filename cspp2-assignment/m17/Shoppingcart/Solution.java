@@ -85,9 +85,9 @@ class Item {
 	public void showCart() {
 		for(Item i : cart) {
 			if (i != null) {
-				/*if (i.quantity != 0) {
+				if (i.quantity != 0) {
 					System.out.println(i.productName+ " " + i.quantity);
-				}*/
+				}
 			}
 		}
 	}
