@@ -79,10 +79,10 @@ public final class Solution {
 			System.out.println("Error! Malformed question");
 			return;
 		}
-		/*if(tokens[0] == null) {
+		if(questionCount == 0) {
 			System.out.println("Error! Malformed question");
 			return;
-		}*/
+		}
 		int penalyCheck = Integer.parseInt(tokens[4]);
 		if(penalyCheck > 0) {
 			System.out.println("Invalid penalty for "+tokens[0]);
