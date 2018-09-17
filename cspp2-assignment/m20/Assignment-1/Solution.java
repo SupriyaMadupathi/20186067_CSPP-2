@@ -273,7 +273,7 @@ public final class Solution {
             System.out.println("Invalid max marks for "+check[0]);
             return;
         }
-        if (checkQuestion.length < 4) {
+        if (checkQuestion.length <= 2) {
             System.out.println(check[0]+" does not have enough answer choices");
             return;
         }
