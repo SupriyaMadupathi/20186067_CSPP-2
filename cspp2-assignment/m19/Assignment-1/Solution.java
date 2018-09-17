@@ -79,7 +79,7 @@ public final class Solution {
 			System.out.println("Error! Malformed question");
 			return;
 		}
-		if(questionCount == 0) {
+		if(tokens[0] == null) {
 			System.out.println("Error! Malformed question");
 			return;
 		}
