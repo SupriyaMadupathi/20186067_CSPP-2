@@ -172,21 +172,24 @@ class Quiz {
      * Shows the report.
      */
     public void showReport() {
-        int score = 0;
         String s = "";
-        for (int i = 0; i < size; i++ ) {
-            System.out.println(getQuestion(i).getQuestionText());
-            if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
-                System.out.println(" Correct Answer! - Marks Awarded: " + getQuestion(i).getMaxMarks());
-                score += getQuestion(i).getMaxMarks(); 
-                
+        int l = 0;
+        for (int i = 0; i < size; i++) {
+            Question question = getQuestion(i);
+            System.out.println(question.getQuestionText());
+            if (question.evaluateResponse(question.getResponse())) {
+                s = " Correct Answer! - Marks Awarded:" + " "
+                    + Integer.toString(question.getMaxMarks());
+                    System.out.println(s);
+                    l += question.getMaxMarks();
             } else {
-                System.out.println(" Wrong Answer! - Penalty: " + getQuestion(i).getPenalty());
-                score += getQuestion(i).getPenalty(); 
+                s = " Wrong Answer! - Penalty:" + " " + Integer.toString(
+                    question.getPenalty());
+                System.out.println(s);
+                l += question.getPenalty();
             }
-            
         }
-        System.out.println("Total Score: " + score);
+        System.out.println("Total Score:" + " " + Integer.toString(l));
     }
 }
 /**
