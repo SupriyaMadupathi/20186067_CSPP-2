@@ -75,7 +75,7 @@ public final class Solution {
 			System.out.println("Quiz does not have questions");
 			return;
 		}
-		if (tokens.length < 5) {
+		if (tokens.length < 4) {
 			System.out.println("Error! Malformed question");
 			return;
 		}
