@@ -256,7 +256,7 @@ public final class Solution {
         String[] checkQuestion = check[1].split(",");
         int help = Integer.parseInt(check[2]);
 
-        if(check.length >= 0) {
+        if(check.length <= 0) {
             System.out.println("Error! Malformed question");
             return;
         }
