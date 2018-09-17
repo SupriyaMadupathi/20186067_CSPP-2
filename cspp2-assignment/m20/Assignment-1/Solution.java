@@ -124,9 +124,9 @@ class Question {
      * @return     String representation of the object.
      */
     public String toString() {
-        String s = "";
-        s += questiontext + ":" + choices + ":" + correctAnswer + ":" + maxMarks + ":" + penalty;
-        s += Arrays.toString(choices).replace("(", ")"); 
+        String s = "    ";
+        /*s += questiontext + ":" + choices + ":" + correctAnswer + ":" + maxMarks + ":" + penalty;
+        s += Arrays.toString(choices).replace("(", ")");*/ 
         return s;
     }
 }
@@ -176,12 +176,25 @@ class Quiz {
      *
      * @return     { description_of_the_return_value }
      */
-    public String showReport() {
+    public void showReport() {
+        int marks = 0;
         String s = "";
-        return s;
+        for (int i = 0; i < size; i++) {
+            System.out.println(getQuestion(i).getQuestionText());
+            if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
+                System.out.println(" Correct Answer! - Marks Awarded: " + getQuestion(i).getMaxMarks());
+                marks = marks + getQuestion(i).getMaxMarks();
+            } else {
+               System.out.println(" Wrong Answer! - Penalty: " + getQuestion(i).getPenalty());
+                marks = marks + getQuestion(i).getPenalty();  
+            }
+            
+    }
+        System.out.println("Total Score: " + marks);
+        }
     }
 
-}
+
 /**
  * Solution class for code-eval.
  */
@@ -299,6 +312,18 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        for (int i = 0; i < q ; i++) {
+            Question question = quiz.getQuestion(i);
+            System.out.println(question.getQuestionText()+"("+question.getMaxMarks()+")");
+            for (int j = 0; j < question.getChoice().length - 1; j++) {
+                System.out.print(question.getChoice()[j] + "\t");
+                
+            }
+            System.out.println(question.getChoice()[question.getChoice().length - 1]);
+            System.out.println();
+            String response = scan.nextLine();
+            question.setResponse(response);
+        }
         
     }
     /**
@@ -308,5 +333,6 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
+        quiz.showReport();
     }
 }
