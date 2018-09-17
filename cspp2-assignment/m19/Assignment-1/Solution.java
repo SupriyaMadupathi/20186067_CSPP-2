@@ -24,7 +24,7 @@ public final class Solution {
 		Quiz q = new Quiz();
 		// code to read the test cases input file
 		Scanner s = new Scanner(System.in);
-		// check if there is one more line to process
+		// tokens if there is one more line to process
 		while (s.hasNext()) {
 			// read the line
 			String line = s.nextLine();
@@ -66,39 +66,39 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
+		String line = s.nextLine();
+		String[] tokens = line.split(":");
+		String[] tokensQuestion = tokens[1].split(",");
+		int help = Integer.parseInt(tokens[2]);
+
 		if (questionCount == 0) {
 			System.out.println("Quiz does not have questions");
 			return;
 		}
-		String a = s.nextLine();
-		String[] check = a.split(":");
-		String[] cQuestion = check[1].split(",");
-		int qn = Integer.parseInt(check[2]);
-
-		if (check.length < 5) {
+		if (tokens.length < 5) {
 			System.out.println("Error! Malformed question");
 			return;
 		}
-		if(check[0] == null) {
+		if(tokens[0] == null) {
 			System.out.println("Error! Malformed question");
 			return;
 		}
-		int penalyCheck = Integer.parseInt(check[4]);
+		int penalyCheck = Integer.parseInt(tokens[4]);
 		if(penalyCheck > 0) {
-			System.out.println("Invalid penalty for "+check[0]);
+			System.out.println("Invalid penalty for "+tokens[0]);
 			return;
 		}
-		int marksCheck = Integer.parseInt(check[3]);
+		int marksCheck = Integer.parseInt(tokens[3]);
 		if(marksCheck < 0) {
-			System.out.println("Invalid max marks for "+check[0]);
+			System.out.println("Invalid max marks for "+tokens[0]);
 			return;
 		}
-		if (cQuestion.length < 4) {
-			System.out.println(check[0]+" does not have enough answer choices");
+		if (tokensQuestion.length < 4) {
+			System.out.println(tokens[0]+" does not have enough answer choices");
 			return;
 		}
 
-		if (qn > 4) {
+		if (help > 4) {
 			System.out.println("Error! Correct answer choice number is out of range for question text 1");
 			return;
 		}
@@ -125,13 +125,6 @@ public final class Solution {
 	 * @param      quiz     The quiz object
 	 */
 	public static void displayScore(final Quiz quiz) {
-		// write your code here to display the score report
-		// for (Quiz x : quiz) {
-		// 	if (x.token[3].equals(quiz)) {
-		// 		System.out.println("Correct Answer! - Marks Awarded: " + x.token[4]);
-		// 	} else {
-		// 		System.out.println("Wrong Answer! - Penalty: "+token[5]);
-		// 	}
-		// }
+		
 	}
 }
