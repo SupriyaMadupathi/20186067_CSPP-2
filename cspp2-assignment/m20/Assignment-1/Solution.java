@@ -59,7 +59,7 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        return false;
+        return choice.equals(getCorrectAnswer());
     }
     /**
      * Gets the correct answer.
@@ -68,7 +68,7 @@ class Question {
      */
     public String getCorrectAnswer() {
        /* return this.correctAnswer;*/
-       return null;
+       return getChoice()[this.correctAnswer - 1];
     }
     /**
      * Gets the question text.
@@ -108,7 +108,7 @@ class Question {
      * @param      answer  The answer
      */
     public void setResponse(final String answer) {
-
+        this.response = answer;
     }
     /**
      * Gets the response.
@@ -116,7 +116,7 @@ class Question {
      * @return     The response.
      */
     public String getResponse() {
-        return null;
+        return this.response;
     }
     /**
      * Returns a string representation of the object.
@@ -256,7 +256,7 @@ public final class Solution {
         String[] checkQuestion = check[1].split(",");
         int help = Integer.parseInt(check[2]);
 
-        if(check.length <= 0) {
+        if(check[0].equals("")) {
             System.out.println("Error! Malformed question");
             return;
         }
@@ -299,6 +299,7 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        
     }
     /**
      * Displays the score report.
