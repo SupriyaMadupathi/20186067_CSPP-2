@@ -252,15 +252,16 @@ public final class Solution {
         }
         String a = scan.nextLine();
         String[] check = a.split(":");
+        /*System.out.println(check[0]);*/
         String[] checkQuestion = check[1].split(",");
         int help = Integer.parseInt(check[2]);
 
-    
-        if (check.length < 5) {
+        if(check.length >= 0) {
             System.out.println("Error! Malformed question");
             return;
         }
-        if(check[0]== "") {
+    
+        if (check.length < 5) {
             System.out.println("Error! Malformed question");
             return;
         }
