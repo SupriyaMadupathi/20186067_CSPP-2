@@ -259,7 +259,7 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             return;
         }
-        if(check.length == 0) {
+        if(checkQuestion.length == 0) {
             System.out.println("Error! Malformed question");
             return;
         }
