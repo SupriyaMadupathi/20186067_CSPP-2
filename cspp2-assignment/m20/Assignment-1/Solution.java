@@ -191,6 +191,7 @@ class Quiz {
         }
         System.out.println("Total Score:" + " " + Integer.toString(l));
     }
+
 }
 /**
  * Solution class for code-eval.
@@ -256,45 +257,43 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if (q == 0) {
+        if (q >= 1) {
+            for (int i = 0; i < q; i++) {
+                String[] tokens = scan.nextLine().split(":");
+                String[] options = tokens[1].split(",");
+                if (tokens.length != 2 + 2 + 1 || tokens[0].length() <= 0) {
+                    System.out.println("Error! Malformed question");
+                    return;
+                } else if (options.length < 2) {
+                    System.out.println(tokens[0]
+                        + " does not have enough answer choices");
+                    return;
+                } else if (Integer.parseInt(tokens[2]) < 1
+                    || Integer.parseInt(tokens[2]) > options.length) {
+                    System.out.println(
+                    "Error! Correct answer choice number is out of range for "
+                        + tokens[0]);
+                    return;
+                } else if (Integer.parseInt(tokens[2 + 1]) < 0) {
+                    System.out.println("Invalid max marks for " + tokens[0]);
+                    return;
+                } else if (Integer.parseInt(tokens[2 + 2]) > 0) {
+                    System.out.println("Invalid penalty for " + tokens[0]);
+                    return;
+                } else {
+                    Question question = new Question(tokens[0],
+                        options, Integer.parseInt(tokens[2]),
+                    Integer.parseInt(tokens[2 + 1]),
+                    Integer.parseInt(tokens[2 + 2]));
+                    quiz.addQuestion(question);
+                }
+            }
+            System.out.println(q + " " + "are added to the quiz");
+        } else {
             System.out.println("Quiz does not have questions");
             return;
         }
-        String line = scan.nextLine();
-        String[] check = line.split(":");
-        String[] checkQuestion = check[1].split(",");
-        int help = Integer.parseInt(check[2]);
-
-        if (check.length < 5) {
-            System.out.println("Error! Malformed question");
-            return;
-        }
-        if(checkQuestion.length == 0) {
-            System.out.println("Error! Malformed question");
-            return;
-        }
-        int penalyCheck = Integer.parseInt(check[4]);
-        if(penalyCheck > 0) {
-            System.out.println("Invalid penalty for "+check[0]);
-            return;
-        }
-        int marksCheck = Integer.parseInt(check[3]);
-        if(marksCheck < 0) {
-            System.out.println("Invalid max marks for "+check[0]);
-            return;
-        }
-        if (checkQuestion.length < 4) {
-            System.out.println(check[0]+" does not have enough answer choices");
-            return;
-        }
-
-        if (help > 4) {
-            System.out.println("Error! Correct answer choice number is out of range for question text 1");
-            return;
-        }
-        System.out.println(q + " are added to the quiz");
     }
-
     /**
      * Starts a quiz.
      *
