@@ -56,10 +56,10 @@ class FoodLog {
 
     public String toString() {
         String str = "Food" + "\n";
-        str += "Date :" + getDate() + "\n";
-        str += "Time :" + getTime() + "\n";
-        str += "Name :" + getItem() + "\n";
-        str += "Quantity :" + getQuantity();
+        str += "Date:" + getDate() + "\n";
+        str += "Time:" + getTime() + "\n";
+        str += "Name:" + getItem() + "\n";
+        str += "Quantity:" + getQuantity() + "\n";
         return str;
     }
 }
@@ -98,8 +98,8 @@ class WaterLog {
    
     public String toString() {
         String str = "Water" + "\n";
-        str += "Date :" + gettimeDate() + "\n";
-        str += "Quantity :" + getWaterQuantity() + "ml";
+        str += "Date:" + gettimeDate() + "\n";
+        str += "Quantity:" + getWaterQuantity() + "ml" + "\n";
         return str;
     }
 }
@@ -172,11 +172,11 @@ class PhysicalActivity {
     
     public String toString() {
         String str = "PhysicalActivity" + "\n";
-        str += "Name :" + getPActivity() + "\n";
-        str += "Notes :" + getNotes() + "\n";
-        str += "Date :" + getDate() + "\n";
-        str += "Starttime :" + getStartTime() + "\n";
-        str += "Endtime :" + getEndTime();
+        str += "Name:" + getPActivity() + "\n";
+        str += "Notes:" + getNotes() + "\n";
+        str += "Date:" + getDate() + "\n";
+        str += "Starttime:" + getStartTime() + "\n";
+        str += "Endtime:" + getEndTime() + "\n";
         return str;
     }
 }
@@ -219,9 +219,9 @@ class SleepLog {
     
     public String toString() {
         String str = "Sleep" + "\n";
-        str += "Date :" + getDate() + "\n";
-        str += "Starttime :" + getStartTime() + "\n";
-        str += "Endtime :" + getEndTime() + "\n";
+        str += "Date:" + getDate() + "\n";
+        str += "Starttime:" + getStartTime() + "\n";
+        str += "Endtime:" + getEndTime() + "\n";
         return str;
     }
 }
@@ -261,6 +261,7 @@ class WeightLog {
     public void setWeight(final String w1) {
         this.weight = w1;
     }
+
     
     public void setFat(final String fat2) {
         this.fat = fat2;
@@ -278,10 +279,10 @@ class WeightLog {
 
     public String toString() {
         String str = "Weight" + "\n";
-        str += "Date :" + getstartDate() + "\n";
-        str += "Time :" + getstartTime() + "\n";
-        str += "Weight :" + getWeight() + "KG" + "\n";
-        str += "Fat :" + getFat();
+        str += "Date:" + getstartDate() + "\n";
+        str += "Time:" + getstartTime() + "\n";
+        str += "Weight:" + getWeight() + "KG" + "\n";
+        str += "Fat:" + getFat() + "\n";
         return str;
     }
 }
