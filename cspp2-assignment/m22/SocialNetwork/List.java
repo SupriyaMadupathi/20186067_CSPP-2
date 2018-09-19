@@ -217,7 +217,7 @@ public class List<E> {
         int i;
         String s = "[";
         for (i = 0; i < count - 1; i++) {
-            s += array[i] + ",";
+            s += array[i] + ", ";
         }
         s += array[i] + "]";
         
