@@ -67,12 +67,12 @@ class Todoist {
 		
 	}
 	public String toString() {
-		String str = "";
+		String s = "";
 		for(Task empty : tasklist) {
-			str += empty;
-			str += "\n";
+			s = s + empty;
+			s = s + "\n";
 		}
-		return str;
+		return s;
 	}
 }
 
@@ -156,9 +156,9 @@ public class TodoistMain {
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        boolean important = tokens[2+2].equals("y");
+        boolean urgent = tokens[2+2+1].equals("y");
+        String status = tokens[2+2+2];
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
