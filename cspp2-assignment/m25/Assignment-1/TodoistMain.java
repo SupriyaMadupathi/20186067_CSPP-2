@@ -57,7 +57,7 @@ class Todoist {
 		return null;
 	}
 	public int totalTime4Completion() {
-		return 1;
+		return 0;
 	}
 	public String getNextTask(String s) {
 		return null;
