@@ -7,25 +7,25 @@ import java.util.Arrays;
   */
 class Task {
 	private String title;
-	private String person;
-	private int time;
+	private String assignedTo;
+	private int timeToComplete;
 	private boolean important;
 	private boolean urgent;
 	private String status;
-	Task(String tle, String name, int time1, boolean imp, boolean urg, String status) throws Exception {
+	Task(String tle, String assign, int time, boolean imp, boolean urg, String sts) throws Exception {
 		if(tle.equals(""))
 			throw new Exception("Title not provided");
 		if(time < 1)
 			throw new Exception("Invalid timeToComplete " + time);
-		if(!(status.equals("todo") || status.equals("done"))) {
-			throw new Exception("Invalid status "+status);
+		if(!(sts.equals("todo") || sts.equals("done"))) {
+			throw new Exception("Invalid status "+sts);
 		}
 		this.title = tle;
-		this.person = name;
-		this.time = time1;
+		this.assignedTo = assign;
+		this.timeToComplete = time;
 		this.important = imp;
 		this.urgent = urg;
-		this.status = status;
+		this.status = sts;
 		
 
 	}
@@ -44,7 +44,7 @@ class Task {
 
 	}
     public String toString() {
-    return title + ", " +person+ ", "+time+ ", " +impt(important, urgent)+ ", "+ status;
+    return title + ", " +assignedTo+ ", "+timeToComplete+ ", " +impt(important, urgent)+ ", "+ status;
  	}
 }
 class Todoist {
