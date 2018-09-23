@@ -70,15 +70,20 @@ public static int compareText(String s1, String s2) {
 }
 }
 
-class Solution {
-    public Solution() {
+public class Solution {
+    Solution() {
 
     }
 
+    /**
+     * { main method}
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
+
         try {
         Scanner sc = new Scanner(System.in);
-    
         String inputFile = sc.nextLine();
         File folder = new File(inputFile);
         File[] listOfFiles = folder.listFiles();
@@ -89,7 +94,8 @@ class Solution {
         int[][] matrix = new int[length][length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
-                matrix[i][j] = BagOfWords.compareText(BagOfWords.fileToString(listOfFiles[i]),BagOfWords.fileToString(listOfFiles[j]));
+                matrix[i][j] = BagOfWords.compareText(BagOfWords.fileToString(listOfFiles[i]),
+                    BagOfWords.fileToString(listOfFiles[j]));
             if (maximum < matrix[i][j]) {
                     maximum = matrix[i][j];
                     matrix1 = "Maximum similarity is in between "
@@ -99,10 +105,10 @@ class Solution {
             }
         }
         System.out.print("\t");
-            for (int i = 0; i < listOfFiles.length-1; i++) {
+            for (int i = 0; i < listOfFiles.length - 1; i++) {
                 System.out.print("\t"  + listOfFiles[i].getName());
             }
-            System.out.println("\t" + listOfFiles[length-1].getName());
+            System.out.println("\t" + listOfFiles[length - 1].getName());
             for (int i = 0; i < length; i++) {
                 System.out.print(listOfFiles[i].getName() + "\t");
             for (int j = 0; j < length; j++) {
