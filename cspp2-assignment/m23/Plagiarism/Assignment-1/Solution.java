@@ -39,9 +39,6 @@ public static Map removeWords(String s1) {
 		}else {
 			map.put((tokens[i]),map.get(tokens[i])+1);
 		}
-		// System.out.println(tokens[i]);
-		// System.out.println(map.toString());
-
 	}return map;
 }
 
@@ -54,8 +51,6 @@ public static int compareText(String s1, String s2) {
 	double secondSum = 0;
 	Map<String,Integer> list1 = removeWords(s1);
 	Map<String,Integer> list2 = removeWords(s2);
-	/*System.out.println(list1.toString());
-	System.out.println(list2.toString());*/
 	for(String e : list1.keySet()) {
 		for(String item : list2.keySet()) {
 			if (e.equals(item)) {
@@ -83,18 +78,26 @@ class Solution {
 	public static void main(String[] args) {
 		try {
 		Scanner sc = new Scanner(System.in);
-		//BagOfWords b = new BagOfWords();
-		//while (sc.hasNext()) {
+	
 		String inputFile = sc.nextLine();
 		File folder = new File(inputFile);
 		File[] listOfFiles = folder.listFiles();
 		//System.out.println(Arrays.toString(listOfFiles));
 		int length = listOfFiles.length;
+		double maximum = 0;
+		String matrix1 = "";
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				matrix[i][j] = BagOfWords.compareText(BagOfWords.fileToString(listOfFiles[i]),BagOfWords.fileToString(listOfFiles[j]));
-			}
+			if (maximum < matrix[i][j]) {
+                    maximum = matrix[i][j];
+                    matrix1 = "Maximum similarity is in between "
+                    + listOfFiles[i].getName() + " and "
+                    + listOfFiles[j].getName();
+                }
+            }
+
 		}System.out.print("\t");
 			for (int i = 0; i < listOfFiles.length-1; i++) {
 				System.out.print("\t"  + listOfFiles[i].getName());
@@ -103,6 +106,7 @@ class Solution {
 			for(int i = 0; i < length; i++) {
 				System.out.print(listOfFiles[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
+				
 				System.out.print(matrix[i][j] + "		");
 			}
 			System.out.println();
