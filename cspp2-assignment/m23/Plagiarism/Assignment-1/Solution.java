@@ -69,15 +69,15 @@ public static int compareText(String s1, String s2) {
         secondSum += Math.pow(list2.get(inList2),2);
     }
     denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-    double result = ((numerator/denominator) * HUNDRED) / HUNDRED;
-    return (int) (result*HUNDRED);
+    double result = ((numerator / denominator) * HUNDRED) / HUNDRED;
+    return (int) (result * HUNDRED);
 }
 }
 
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
 
   /**
    * Constructs the object.
@@ -106,7 +106,8 @@ public class Solution {
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
                 matrix[i][j] = BagOfWords.compareText(BagOfWords.
-                    fileToString(listOfFiles[i]), BagOfWords.fileToString(listOfFiles[j]));
+                    fileToString(listOfFiles[i]),
+                    BagOfWords.fileToString(listOfFiles[j]));
             if (maximum < matrix[i][j]) {
                     maximum = matrix[i][j];
                     matrix1 = "Maximum similarity is in between "
