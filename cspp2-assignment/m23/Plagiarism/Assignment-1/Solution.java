@@ -46,10 +46,13 @@ public static Map removeWords(String s1) {
         }
     } return map;
 }
+/**
+ * { var_description }.
+ */
 private static final double HUNDRED = 100;
 
 /**
- * { var_description }.
+ * { function_description }
  *
  * @param      s1    The s 1
  * @param      s2    The s 2
