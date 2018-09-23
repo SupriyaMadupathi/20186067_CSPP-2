@@ -25,10 +25,15 @@ public static String fileToString(File f) {
     str = sb.toString();
 } catch(FileNotFoundException e) {
     System.out.println("no file");
-}return str;
+} return str;
 }
-
-
+/**
+ * Removes words.
+ *
+ * @param      s1    The s 1
+ *
+ * @return     { description_of_the_return_value }
+ */
 public static Map removeWords(String s1) {
     s1 = s1.toLowerCase();
     String[] tokens = s1.replaceAll("[^A-Za-z \\s]","").split(" ");
@@ -42,8 +47,14 @@ public static Map removeWords(String s1) {
     } return map;
 }
 private static final double HUNDRED = 100;
+
 /**
  * { var_description }.
+ *
+ * @param      s1    The s 1
+ * @param      s2    The s 2
+ *
+ * @return     { description_of_the_return_value }
  */
 public static int compareText(final String s1, final String s2) {
 
