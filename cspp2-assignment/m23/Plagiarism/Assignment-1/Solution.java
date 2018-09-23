@@ -37,36 +37,34 @@ public static Map removeWords(String s1) {
         if(!map.containsKey(tokens[i])) {
             map.put(tokens[i],1);
         }else {
-            map.put((tokens[i]),map.get(tokens[i])+1);
+            map.put((tokens[i]),map.get(tokens[i]) + 1);
         }
     }return map;
 }
-
-
 /**
- * { var_description }
+ * { var_description }.
  */
 private static final double HUNDRED = 100;
-public static int compareText(String s1, String s2) {
+public static int compareText(final String s1, String s2) {
 
     double numerator = 0;
     double denominator = 0;
     double firstSum = 0;
     double secondSum = 0;
-    Map<String,Integer> list1 = removeWords(s1);
-    Map<String,Integer> list2 = removeWords(s2);
-    for(String e : list1.keySet()) {
-        for(String item : list2.keySet()) {
+    Map<String, Integer> list1 = removeWords(s1);
+    Map<String, Integer> list2 = removeWords(s2);
+    for (String e : list1.keySet()) {
+        for (String item : list2.keySet()) {
             if (e.equals(item)) {
                 numerator += list1.get(e) * list2.get(item);
             }
         }
     }
-    for(String inList1 : list1.keySet()) {
-        firstSum += Math.pow(list1.get(inList1),2);
+    for (String inList1 : list1.keySet()) {
+        firstSum += Math.pow(list1.get(inList1), 2);
     }
-    for(String inList2 : list2.keySet()) {
-        secondSum += Math.pow(list2.get(inList2),2);
+    for (String inList2 : list2.keySet()) {
+        secondSum += Math.pow(list2.get(inList2), 2);
     }
     denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
     double result = ((numerator / denominator) * HUNDRED) / HUNDRED;
