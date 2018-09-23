@@ -43,8 +43,12 @@ public static Map removeWords(String s1) {
 }
 
 
-
+/**
+ * { var_description }
+ */
+private static final double HUNDRED = 100;
 public static int compareText(String s1, String s2) {
+
     double numerator = 0;
     double denominator = 0;
     double firstSum = 0;
@@ -65,22 +69,29 @@ public static int compareText(String s1, String s2) {
         secondSum += Math.pow(list2.get(inList2),2);
     }
     denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-    double result = ((numerator/denominator) * 100D) / 100D;
-    return (int) (result*100);
+    double result = ((numerator/denominator) * HUNDRED) / HUNDRED;
+    return (int) (result*HUNDRED);
 }
 }
 
+/**
+ * Class for solution.
+ */
 public class Solution {
-    Solution() {
+
+  /**
+   * Constructs the object.
+   */
+  public Solution() {
 
     }
 
     /**
-     * { main method}
+     * { main method}.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         try {
         Scanner sc = new Scanner(System.in);
@@ -94,8 +105,8 @@ public class Solution {
         int[][] matrix = new int[length][length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
-                matrix[i][j] = BagOfWords.compareText(BagOfWords.fileToString(listOfFiles[i]),
-                    BagOfWords.fileToString(listOfFiles[j]));
+                matrix[i][j] = BagOfWords.compareText(BagOfWords.
+                    fileToString(listOfFiles[i]), BagOfWords.fileToString(listOfFiles[j]));
             if (maximum < matrix[i][j]) {
                     maximum = matrix[i][j];
                     matrix1 = "Maximum similarity is in between "
