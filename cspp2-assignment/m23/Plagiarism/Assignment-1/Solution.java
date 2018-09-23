@@ -13,19 +13,28 @@ class BagOfWords {
         this.text2 = t2;
     }
 
-public static String fileToString(File f) {
+/**
+ * { function_description }
+ *
+ * @param      f     { parameter_description }
+ *
+ * @return     { description_of_the_return_value }
+ */
+public static String fileToString(final File f) {
+
     String str = "";
     try {
     Scanner sc = new Scanner(new FileReader(f));
     StringBuilder sb = new StringBuilder();
-    while(sc.hasNext()) {
+    while (sc.hasNext()) {
         sb.append(sc.next());
         sb.append(" ");
     }sc.close();
     str = sb.toString();
-} catch(FileNotFoundException e) {
+} catch (FileNotFoundException e) {
     System.out.println("no file");
-} return str;
+}
+ return str;
 }
 /**
  * Removes words.
