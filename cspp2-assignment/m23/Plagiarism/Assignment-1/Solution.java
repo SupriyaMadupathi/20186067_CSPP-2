@@ -35,17 +35,17 @@ public static Map removeWords(String s1) {
     Map<String, Integer> map = new HashMap<>();
     for (int i = 0; i < tokens.length; i++) {
         if(!map.containsKey(tokens[i])) {
-            map.put(tokens[i],1);
+            map.put(tokens[i], 1);
         }else {
-            map.put((tokens[i]),map.get(tokens[i]) + 1);
+            map.put((tokens[i]), map.get(tokens[i]) + 1);
         }
-    }return map;
+    } return map;
 }
+private static final double HUNDRED = 100;
 /**
  * { var_description }.
  */
-private static final double HUNDRED = 100;
-public static int compareText(final String s1, String s2) {
+public static int compareText(final String s1, final String s2) {
 
     double numerator = 0;
     double denominator = 0;
