@@ -8,16 +8,23 @@ class BagOfWords {
     public BagOfWords() {
 
     }
-    public BagOfWords(String t1, String t2) {
+    /**
+     * Constructs the object.
+     *
+     * @param      t1    The t 1
+     * @param      t2    The t 2
+     */
+    public BagOfWords(final String t1,final String t2) {
+
         this.text1 = t1;
         this.text2 = t2;
     }
 
 /**
- * { function_description }
+ * { function_description }.
  *
  * @param      f     { parameter_description }
- *
+ * 
  * @return     { description_of_the_return_value }
  */
 public static String fileToString(final File f) {
@@ -29,7 +36,7 @@ public static String fileToString(final File f) {
     while (sc.hasNext()) {
         sb.append(sc.next());
         sb.append(" ");
-    }sc.close();
+    } sc.close();
     str = sb.toString();
 } catch (FileNotFoundException e) {
     System.out.println("no file");
